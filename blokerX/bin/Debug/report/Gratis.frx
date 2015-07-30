@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="02/20/2013 08:38:06" ReportInfo.Modified="02/20/2013 08:43:49" ReportInfo.CreatorVersion="1.4.19.0">
+  <Dictionary>
+    <TableDataSource Name="Artikli" ReferenceName="Data.Artikli" DataType="System.Int32" Enabled="true">
+      <Column Name="uf_broj" DataType="System.String"/>
+      <Column Name="uf_datum" DataType="MySql.Data.Types.MySqlDateTime, MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"/>
+      <Column Name="poslovnica_po_ID" DataType="System.Int32"/>
+      <Column Name="uf_memo" DataType="System.String"/>
+      <Column Name="uf_iznos" DataType="System.Decimal"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="132.3">
+      <TextObject Name="Text1" Left="548.1" Top="9.45" Width="160.65" Height="18.9" Text="[Date]"/>
+      <TextObject Name="Text2" Left="198.45" Top="75.6" Width="359.1" Height="18.9" Text="&quot;GRATIS&quot; Kalkulacije koje nisu zadužene" Font="Arial, 12pt, style=Bold, Italic"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="136.3" Width="718.2" Height="18.9" Border.Lines="Bottom">
+      <TextObject Name="Text3" Left="56.7" Width="94.5" Height="18.9" Text="Kalkulacija&#13;&#10;" Font="Arial, 10pt, style=Bold, Italic"/>
+      <TextObject Name="Text4" Left="151.2" Width="113.4" Height="18.9" Text="Datum računa" Font="Arial, 10pt, style=Bold, Italic"/>
+      <TextObject Name="Text5" Left="264.7" Top="-0.75" Width="132.3" Height="18.9" Text="Poslovnica&#13;&#10;" Font="Arial, 10pt, style=Bold, Italic"/>
+      <TextObject Name="Text6" Left="396.9" Width="179.55" Height="18.9" Text="Napomena&#13;&#10;" Font="Arial, 10pt, style=Bold, Italic"/>
+      <TextObject Name="Text7" Left="576.45" Width="94.5" Height="18.9" Text="Iznos&#13;&#10;" Font="Arial, 10pt, style=Bold, Italic"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="159.2" Width="718.2" Height="19.9" DataSource="Artikli">
+      <TextObject Name="Text8" Left="56.7" Top="1" Width="94.5" Height="18.9" Text="[Artikli.uf_broj]" Font="Arial, 9pt"/>
+      <TextObject Name="Text9" Left="151.2" Top="1" Width="113.4" Height="18.9" Text="[Artikli.uf_datum]" Font="Arial, 9pt"/>
+      <TextObject Name="Text10" Left="264.6" Top="1" Width="132.3" Height="18.9" Text="[Artikli.poslovnica_po_ID]" HideZeros="true" Font="Arial, 9pt"/>
+      <TextObject Name="Text11" Left="396.9" Top="1" Width="179.55" Height="18.9" Text="[Artikli.uf_memo]" Font="Arial, 9pt"/>
+      <TextObject Name="Text12" Left="576.45" Top="1" Width="94.5" Height="18.9" Text="[Artikli.uf_iznos]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" WordWrap="false" Font="Arial, 9pt" Trimming="EllipsisCharacter"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="183.1" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>

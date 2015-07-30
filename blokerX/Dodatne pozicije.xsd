@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Dodatne_pozicije" targetNamespace="http://tempuri.org/Dodatne pozicije.xsd" xmlns:mstns="http://tempuri.org/Dodatne pozicije.xsd" xmlns="http://tempuri.org/Dodatne pozicije.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="boso2011ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="boso2011ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.blokerX.Properties.Settings.GlobalReference.Default.boso2011ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DodatnePozicijeTableAdapter" GeneratorDataComponentClassName="DodatnePozicijeTableAdapter" Name="DodatnePozicije" UserDataComponentName="DodatnePozicijeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="boso2011ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select pozicija.*, partner.pa_sifra, partner.pa_naziv, operater.op_sifra, CONCAT(operater.op_ime,' ' ,operater.op_prezime), sum(pozicijaracun.pozr_iznosracuna), vrstapozicije.vp_naziv  from vrstapozicije, pozicija
+left join pozicijaracun on pozicija.poz_ID =pozicijaracun.pozicija_ID 
+ left outer join partner on pozicija.partner_PA_ID = partner.pa_ID   
+left outer join operater on pozicija.operater_OP_ID1 = operater.op_ID  where vrstapozicije.vp_id = pozicija.vrstapozicije_pz_id
+group by pozicija.poz_ID
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="poz_ID" DataSetColumn="poz_ID" />
+              <Mapping SourceColumn="operater_OP_ID" DataSetColumn="operater_OP_ID" />
+              <Mapping SourceColumn="operater_OP_ID1" DataSetColumn="operater_OP_ID1" />
+              <Mapping SourceColumn="poz_datumizrade" DataSetColumn="poz_datumizrade" />
+              <Mapping SourceColumn="partner_PA_ID" DataSetColumn="partner_PA_ID" />
+              <Mapping SourceColumn="vrstapozicije_pz_id" DataSetColumn="vrstapozicije_pz_id" />
+              <Mapping SourceColumn="poz_opis" DataSetColumn="poz_opis" />
+              <Mapping SourceColumn="poz_opis2" DataSetColumn="poz_opis2" />
+              <Mapping SourceColumn="poz_odkada" DataSetColumn="poz_odkada" />
+              <Mapping SourceColumn="poz_dokada" DataSetColumn="poz_dokada" />
+              <Mapping SourceColumn="pa_naziv" DataSetColumn="pa_naziv" />
+              <Mapping SourceColumn="CONCAT(operater.op_ime,' ' ,operater.op_prezime)" DataSetColumn="CONCAT(operater_op_ime,' ' ,operater_op_prezime)" />
+              <Mapping SourceColumn="sum(pozicijaracun.pozr_iznosracuna)" DataSetColumn="sum(pozicijaracun_pozr_iznosracuna)" />
+              <Mapping SourceColumn="pa_sifra" DataSetColumn="pa_sifra" />
+              <Mapping SourceColumn="op_sifra" DataSetColumn="op_sifra" />
+              <Mapping SourceColumn="vp_naziv" DataSetColumn="vp_naziv" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="boso2011ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select pozicija.*, partner.pa_sifra, partner.pa_naziv, operater.op_sifra, CONCAT(operater.op_ime,' ' ,operater.op_prezime), sum(pozicijaracun.pozr_iznosracuna), vrstapozicije.vp_naziv  from vrstapozicije, pozicija
+left join pozicijaracun on pozicija.poz_ID =pozicijaracun.pozicija_ID 
+ left outer join partner on pozicija.partner_PA_ID = partner.pa_ID   
+left outer join operater on pozicija.operater_OP_ID1 = operater.op_ID  where vrstapozicije.vp_id = pozicija.vrstapozicije_pz_id and  pozicija.poz_dokada between @prvi and @drugi
+group by pozicija.poz_ID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="prvi" ColumnName="poz_dokada" DataSourceName="boso2011.pozicija" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@prvi" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="poz_dokada" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="drugi" ColumnName="poz_dokada" DataSourceName="boso2011.pozicija" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@drugi" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="poz_dokada" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Dodatne_pozicije" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Dodatne_pozicije" msprop:Generator_UserDSName="Dodatne_pozicije">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DodatnePozicije" msprop:Generator_TableClassName="DodatnePozicijeDataTable" msprop:Generator_TableVarName="tableDodatnePozicije" msprop:Generator_TablePropName="DodatnePozicije" msprop:Generator_RowDeletingName="DodatnePozicijeRowDeleting" msprop:Generator_UserTableName="DodatnePozicije" msprop:Generator_RowChangingName="DodatnePozicijeRowChanging" msprop:Generator_RowEvHandlerName="DodatnePozicijeRowChangeEventHandler" msprop:Generator_RowDeletedName="DodatnePozicijeRowDeleted" msprop:Generator_RowEvArgName="DodatnePozicijeRowChangeEvent" msprop:Generator_RowChangedName="DodatnePozicijeRowChanged" msprop:Generator_RowClassName="DodatnePozicijeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="poz_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpoz_ID" msprop:Generator_ColumnPropNameInRow="poz_ID" msprop:Generator_ColumnPropNameInTable="poz_IDColumn" msprop:Generator_UserColumnName="poz_ID" type="xs:int" />
+              <xs:element name="operater_OP_ID" msprop:Generator_ColumnVarNameInTable="columnoperater_OP_ID" msprop:Generator_ColumnPropNameInRow="operater_OP_ID" msprop:Generator_ColumnPropNameInTable="operater_OP_IDColumn" msprop:Generator_UserColumnName="operater_OP_ID" type="xs:int" />
+              <xs:element name="operater_OP_ID1" msprop:Generator_ColumnVarNameInTable="columnoperater_OP_ID1" msprop:Generator_ColumnPropNameInRow="operater_OP_ID1" msprop:Generator_ColumnPropNameInTable="operater_OP_ID1Column" msprop:Generator_UserColumnName="operater_OP_ID1" type="xs:int" />
+              <xs:element name="poz_datumizrade" msprop:Generator_ColumnVarNameInTable="columnpoz_datumizrade" msprop:Generator_ColumnPropNameInRow="poz_datumizrade" msprop:Generator_ColumnPropNameInTable="poz_datumizradeColumn" msprop:Generator_UserColumnName="poz_datumizrade" type="xs:dateTime" />
+              <xs:element name="partner_PA_ID" msprop:Generator_ColumnVarNameInTable="columnpartner_PA_ID" msprop:Generator_ColumnPropNameInRow="partner_PA_ID" msprop:Generator_ColumnPropNameInTable="partner_PA_IDColumn" msprop:Generator_UserColumnName="partner_PA_ID" type="xs:int" />
+              <xs:element name="vrstapozicije_pz_id" msprop:Generator_ColumnVarNameInTable="columnvrstapozicije_pz_id" msprop:Generator_ColumnPropNameInRow="vrstapozicije_pz_id" msprop:Generator_ColumnPropNameInTable="vrstapozicije_pz_idColumn" msprop:Generator_UserColumnName="vrstapozicije_pz_id" type="xs:int" />
+              <xs:element name="poz_opis" msprop:Generator_ColumnVarNameInTable="columnpoz_opis" msprop:Generator_ColumnPropNameInRow="poz_opis" msprop:Generator_ColumnPropNameInTable="poz_opisColumn" msprop:Generator_UserColumnName="poz_opis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="poz_opis2" msprop:Generator_ColumnVarNameInTable="columnpoz_opis2" msprop:Generator_ColumnPropNameInRow="poz_opis2" msprop:Generator_ColumnPropNameInTable="poz_opis2Column" msprop:Generator_UserColumnName="poz_opis2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65535" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="poz_odkada" msprop:Generator_ColumnVarNameInTable="columnpoz_odkada" msprop:Generator_ColumnPropNameInRow="poz_odkada" msprop:Generator_ColumnPropNameInTable="poz_odkadaColumn" msprop:Generator_UserColumnName="poz_odkada" type="xs:dateTime" />
+              <xs:element name="poz_dokada" msprop:Generator_ColumnVarNameInTable="columnpoz_dokada" msprop:Generator_ColumnPropNameInRow="poz_dokada" msprop:Generator_ColumnPropNameInTable="poz_dokadaColumn" msprop:Generator_UserColumnName="poz_dokada" type="xs:dateTime" />
+              <xs:element name="pa_naziv" msprop:Generator_ColumnVarNameInTable="columnpa_naziv" msprop:Generator_ColumnPropNameInRow="pa_naziv" msprop:Generator_ColumnPropNameInTable="pa_nazivColumn" msprop:Generator_UserColumnName="pa_naziv" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CONCAT_x0028_operater_op_ime_x002C__x0027__x0020__x0027__x0020__x002C_operater_op_prezime_x0029_" msdata:Caption="CONCAT(operater.op_ime,' ' ,operater.op_prezime)" msprop:Generator_ColumnVarNameInTable="_columnCONCAT_operater_op_ime______operater_op_prezime_" msprop:Generator_ColumnPropNameInRow="_CONCAT_operater_op_ime______operater_op_prezime_" msprop:Generator_ColumnPropNameInTable="_CONCAT_operater_op_ime______operater_op_prezime_Column" msprop:Generator_UserColumnName="CONCAT(operater_op_ime,' ' ,operater_op_prezime)" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="91" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sum_x0028_pozicijaracun_pozr_iznosracuna_x0029_" msdata:Caption="sum(pozicijaracun.pozr_iznosracuna)" msprop:Generator_ColumnVarNameInTable="_columnsum_pozicijaracun_pozr_iznosracuna_" msprop:Generator_ColumnPropNameInRow="_sum_pozicijaracun_pozr_iznosracuna_" msprop:Generator_ColumnPropNameInTable="_sum_pozicijaracun_pozr_iznosracuna_Column" msprop:Generator_UserColumnName="sum(pozicijaracun_pozr_iznosracuna)" type="xs:decimal" minOccurs="0" />
+              <xs:element name="pa_sifra" msprop:Generator_ColumnVarNameInTable="columnpa_sifra" msprop:Generator_ColumnPropNameInRow="pa_sifra" msprop:Generator_ColumnPropNameInTable="pa_sifraColumn" msprop:Generator_UserColumnName="pa_sifra" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="op_sifra" msprop:Generator_ColumnVarNameInTable="columnop_sifra" msprop:Generator_ColumnPropNameInRow="op_sifra" msprop:Generator_ColumnPropNameInTable="op_sifraColumn" msprop:Generator_UserColumnName="op_sifra" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vp_naziv" msprop:Generator_ColumnVarNameInTable="columnvp_naziv" msprop:Generator_ColumnPropNameInRow="vp_naziv" msprop:Generator_ColumnPropNameInTable="vp_nazivColumn" msprop:Generator_UserColumnName="vp_naziv">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DodatnePozicije" />
+      <xs:field xpath="mstns:poz_ID" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:DodatnePozicije" />
+      <xs:field xpath="mstns:pa_sifra" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

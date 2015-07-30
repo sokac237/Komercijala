@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Pregled_akcija" targetNamespace="http://tempuri.org/Pregled akcija.xsd" xmlns:mstns="http://tempuri.org/Pregled akcija.xsd" xmlns="http://tempuri.org/Pregled akcija.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="boso2011ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="boso2011ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.blokerX.Properties.Settings.GlobalReference.Default.boso2011ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AkcijeTableAdapter" GeneratorDataComponentClassName="AkcijeTableAdapter" Name="Akcije" UserDataComponentName="AkcijeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="boso2011ConnectionString (Settings)" DbObjectName="def.mpman.akcijezag" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select akcijezag.akc_ID, akcijezag.AKC_BROJ, akcijezag.AKC_DATUMOD, akcijezag.AKC_DATUMDO, akcijezag.AKC_OPIS, akcijezag.AKC_AKTIVNA, akcijezag.AKC_POPUST, 
+akcijezag.AKC_VEZANA, akcijezag.POK_SIFRAVEZANA, boso2011.akcijakategorija.POK_SIFRA, boso2011.akcijakategorija.POK_NAZIV, concat ( boso2011.operater.op_ime ,' ', boso2011.operater.op_prezime) as operater , akc_datumizmjene
+from boso2011.akcijakategorija,  mpman.akcijezag left join boso2011.operater on boso2011.operater.op_ID = mpman.akcijezag.OPERATER_OP_ID  where boso2011.akcijakategorija.pok_sifra = akcijezag.pok_sifra </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="akc_ID" DataSetColumn="akc_ID" />
+              <Mapping SourceColumn="AKC_BROJ" DataSetColumn="AKC_BROJ" />
+              <Mapping SourceColumn="AKC_DATUMOD" DataSetColumn="AKC_DATUMOD" />
+              <Mapping SourceColumn="AKC_DATUMDO" DataSetColumn="AKC_DATUMDO" />
+              <Mapping SourceColumn="AKC_OPIS" DataSetColumn="AKC_OPIS" />
+              <Mapping SourceColumn="AKC_AKTIVNA" DataSetColumn="AKC_AKTIVNA" />
+              <Mapping SourceColumn="AKC_POPUST" DataSetColumn="AKC_POPUST" />
+              <Mapping SourceColumn="AKC_VEZANA" DataSetColumn="AKC_VEZANA" />
+              <Mapping SourceColumn="POK_SIFRAVEZANA" DataSetColumn="POK_SIFRAVEZANA" />
+              <Mapping SourceColumn="POK_SIFRA" DataSetColumn="POK_SIFRA" />
+              <Mapping SourceColumn="POK_NAZIV" DataSetColumn="POK_NAZIV" />
+              <Mapping SourceColumn="operater" DataSetColumn="operater" />
+              <Mapping SourceColumn="akc_datumizmjene" DataSetColumn="akc_datumizmjene" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="boso2011ConnectionString (Settings)" DbObjectName="mpman.akcijezag" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select akcijezag.akc_ID, akcijezag.AKC_BROJ, akcijezag.AKC_DATUMOD, akcijezag.AKC_DATUMDO, akcijezag.AKC_OPIS, akcijezag.AKC_AKTIVNA, akcijezag.AKC_POPUST, akcijezag.akc_vrijednostsnizenja, concat ( boso2011.operater.op_ime ,' ', boso2011.operater.op_prezime) as operater , akc_datumizmjene
+from  mpman.akcijezag left join boso2011.operater on boso2011.operater.op_ID = mpman.akcijezag.OPERATER_OP_ID  where  mpman.akcijezag.AKC_AKTIVNA = 1 and mpman.akcijezag.POK_SIFRA =16 order by akc_broj desc</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="poslovnicaTableAdapter" GeneratorDataComponentClassName="poslovnicaTableAdapter" Name="poslovnica" UserDataComponentName="poslovnicaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="boso2011ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="PoslanaAkcija" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="PoslanaAkcija" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="PoslanaAkcija">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select boso2011.poslovnica.po_naziv, mpman.akcijatrgovina.PO_SIFRA, mpman.akcijatrgovina.AKCTRG_DATUM_SLANJA, mpman.akcijatrgovina.AKCTRG_USPJELO from mpman.akcijatrgovina, boso2011.poslovnica where boso2011.poslovnica.po_sifra = mpman.akcijatrgovina.PO_SIFRA and mpman.akcijatrgovina.AKC_BROJ = @ID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="AKC_BROJ" DataSourceName="mpman.akcijatrgovina" DataTypeServer="char(7)(7)" DbType="String" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="String" Scale="0" Size="7" SourceColumn="AKC_BROJ" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="po_naziv" DataSetColumn="po_naziv" />
+              <Mapping SourceColumn="PO_SIFRA" DataSetColumn="PO_SIFRA" />
+              <Mapping SourceColumn="AKCTRG_DATUM_SLANJA" DataSetColumn="AKCTRG_DATUM_SLANJA" />
+              <Mapping SourceColumn="AKCTRG_USPJELO" DataSetColumn="AKCTRG_USPJELO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="snizenjaTableAdapter" GeneratorDataComponentClassName="snizenjaTableAdapter" Name="snizenja" UserDataComponentName="snizenjaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="boso2011ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select akcijezag.akc_ID, akcijezag.AKC_BROJ, akcijezag.AKC_DATUMOD, akcijezag.AKC_DATUMDO, akcijezag.AKC_OPIS, akcijezag.AKC_AKTIVNA, akcijezag.AKC_POPUST, concat ( boso2011.operater.op_ime ,' ', boso2011.operater.op_prezime) as operater , mpman.akcijezag.AKC_VRIJEDNOSTSNIZENJA, mpman.akcijezag.AKC_DATUMIZMJENE
+from mpman.akcije, mpman.akcijezag left join boso2011.operater on boso2011.operater.op_ID = mpman.akcijezag.OPERATER_OP_ID  where mpman.akcije.AKCIJEZAG_AKC_ID = mpman.akcijezag.AKC_ID and  mpman.akcijezag.POK_SIFRA =16 and mpman.akcijezag.AKC_AKTIVNA = 1 and mpman.akcije.AKC_PRODAJNACIJENA is not null and mpman.akcijezag.partner_pa_sifra &lt;&gt; 1200 group by akcijezag.akc_id order by mpman.akcijezag.AKC_BROJ desc</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="akc_ID" DataSetColumn="akc_ID" />
+              <Mapping SourceColumn="AKC_BROJ" DataSetColumn="AKC_BROJ" />
+              <Mapping SourceColumn="AKC_DATUMOD" DataSetColumn="AKC_DATUMOD" />
+              <Mapping SourceColumn="AKC_DATUMDO" DataSetColumn="AKC_DATUMDO" />
+              <Mapping SourceColumn="AKC_OPIS" DataSetColumn="AKC_OPIS" />
+              <Mapping SourceColumn="AKC_AKTIVNA" DataSetColumn="AKC_AKTIVNA" />
+              <Mapping SourceColumn="AKC_POPUST" DataSetColumn="AKC_POPUST" />
+              <Mapping SourceColumn="operater" DataSetColumn="operater" />
+              <Mapping SourceColumn="AKC_VRIJEDNOSTSNIZENJA" DataSetColumn="AKC_VRIJEDNOSTSNIZENJA" />
+              <Mapping SourceColumn="AKC_DATUMIZMJENE" DataSetColumn="AKC_DATUMIZMJENE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Pregled_akcija" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Pregled_akcija" msprop:Generator_UserDSName="Pregled_akcija">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Akcije" msprop:Generator_TableClassName="AkcijeDataTable" msprop:Generator_TableVarName="tableAkcije" msprop:Generator_TablePropName="Akcije" msprop:Generator_RowDeletingName="AkcijeRowDeleting" msprop:Generator_RowChangingName="AkcijeRowChanging" msprop:Generator_RowEvHandlerName="AkcijeRowChangeEventHandler" msprop:Generator_RowDeletedName="AkcijeRowDeleted" msprop:Generator_UserTableName="Akcije" msprop:Generator_RowChangedName="AkcijeRowChanged" msprop:Generator_RowEvArgName="AkcijeRowChangeEvent" msprop:Generator_RowClassName="AkcijeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="akc_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnakc_ID" msprop:Generator_ColumnPropNameInRow="akc_ID" msprop:Generator_ColumnPropNameInTable="akc_IDColumn" msprop:Generator_UserColumnName="akc_ID" type="xs:int" />
+              <xs:element name="AKC_BROJ" msprop:Generator_ColumnVarNameInTable="columnAKC_BROJ" msprop:Generator_ColumnPropNameInRow="AKC_BROJ" msprop:Generator_ColumnPropNameInTable="AKC_BROJColumn" msprop:Generator_UserColumnName="AKC_BROJ">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="21" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AKC_DATUMOD" msdata:DataType="MySql.Data.Types.MySqlDateTime, MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" msprop:Generator_ColumnVarNameInTable="columnAKC_DATUMOD" msprop:Generator_ColumnPropNameInRow="AKC_DATUMOD" msprop:Generator_ColumnPropNameInTable="AKC_DATUMODColumn" msprop:Generator_UserColumnName="AKC_DATUMOD" type="xs:anyType" minOccurs="0" />
+              <xs:element name="AKC_DATUMDO" msdata:DataType="MySql.Data.Types.MySqlDateTime, MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" msprop:Generator_ColumnVarNameInTable="columnAKC_DATUMDO" msprop:Generator_ColumnPropNameInRow="AKC_DATUMDO" msprop:Generator_ColumnPropNameInTable="AKC_DATUMDOColumn" msprop:Generator_UserColumnName="AKC_DATUMDO" type="xs:anyType" minOccurs="0" />
+              <xs:element name="AKC_OPIS" msprop:Generator_ColumnVarNameInTable="columnAKC_OPIS" msprop:Generator_ColumnPropNameInRow="AKC_OPIS" msprop:Generator_ColumnPropNameInTable="AKC_OPISColumn" msprop:Generator_UserColumnName="AKC_OPIS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="90" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AKC_AKTIVNA" msprop:Generator_ColumnVarNameInTable="columnAKC_AKTIVNA" msprop:Generator_ColumnPropNameInRow="AKC_AKTIVNA" msprop:Generator_ColumnPropNameInTable="AKC_AKTIVNAColumn" msprop:Generator_UserColumnName="AKC_AKTIVNA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AKC_POPUST" msprop:Generator_ColumnVarNameInTable="columnAKC_POPUST" msprop:Generator_ColumnPropNameInRow="AKC_POPUST" msprop:Generator_ColumnPropNameInTable="AKC_POPUSTColumn" msprop:Generator_UserColumnName="AKC_POPUST" type="xs:decimal" />
+              <xs:element name="AKC_VEZANA" msprop:Generator_ColumnVarNameInTable="columnAKC_VEZANA" msprop:Generator_ColumnPropNameInRow="AKC_VEZANA" msprop:Generator_ColumnPropNameInTable="AKC_VEZANAColumn" msprop:Generator_UserColumnName="AKC_VEZANA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="POK_SIFRAVEZANA" msprop:Generator_ColumnVarNameInTable="columnPOK_SIFRAVEZANA" msprop:Generator_ColumnPropNameInRow="POK_SIFRAVEZANA" msprop:Generator_ColumnPropNameInTable="POK_SIFRAVEZANAColumn" msprop:Generator_UserColumnName="POK_SIFRAVEZANA" type="xs:byte" minOccurs="0" />
+              <xs:element name="POK_SIFRA" msprop:Generator_ColumnVarNameInTable="columnPOK_SIFRA" msprop:Generator_ColumnPropNameInRow="POK_SIFRA" msprop:Generator_ColumnPropNameInTable="POK_SIFRAColumn" msprop:Generator_UserColumnName="POK_SIFRA" type="xs:byte" />
+              <xs:element name="POK_NAZIV" msprop:Generator_ColumnVarNameInTable="columnPOK_NAZIV" msprop:Generator_ColumnPropNameInRow="POK_NAZIV" msprop:Generator_ColumnPropNameInTable="POK_NAZIVColumn" msprop:Generator_UserColumnName="POK_NAZIV" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="operater" msprop:Generator_ColumnVarNameInTable="columnoperater" msprop:Generator_ColumnPropNameInRow="operater" msprop:Generator_ColumnPropNameInTable="operaterColumn" msprop:Generator_UserColumnName="operater" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="91" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="akc_datumizmjene" msdata:DataType="MySql.Data.Types.MySqlDateTime, MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" msprop:Generator_ColumnVarNameInTable="columnakc_datumizmjene" msprop:Generator_ColumnPropNameInRow="akc_datumizmjene" msprop:Generator_ColumnPropNameInTable="akc_datumizmjeneColumn" msprop:Generator_UserColumnName="akc_datumizmjene" type="xs:anyType" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="poslovnica" msprop:Generator_TableClassName="poslovnicaDataTable" msprop:Generator_TableVarName="tableposlovnica" msprop:Generator_TablePropName="poslovnica" msprop:Generator_RowDeletingName="poslovnicaRowDeleting" msprop:Generator_RowChangingName="poslovnicaRowChanging" msprop:Generator_RowEvHandlerName="poslovnicaRowChangeEventHandler" msprop:Generator_RowDeletedName="poslovnicaRowDeleted" msprop:Generator_UserTableName="poslovnica" msprop:Generator_RowChangedName="poslovnicaRowChanged" msprop:Generator_RowEvArgName="poslovnicaRowChangeEvent" msprop:Generator_RowClassName="poslovnicaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="po_naziv" msprop:Generator_ColumnVarNameInTable="columnpo_naziv" msprop:Generator_ColumnPropNameInRow="po_naziv" msprop:Generator_ColumnPropNameInTable="po_nazivColumn" msprop:Generator_UserColumnName="po_naziv">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PO_SIFRA" msprop:Generator_ColumnVarNameInTable="columnPO_SIFRA" msprop:Generator_ColumnPropNameInRow="PO_SIFRA" msprop:Generator_ColumnPropNameInTable="PO_SIFRAColumn" msprop:Generator_UserColumnName="PO_SIFRA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AKCTRG_DATUM_SLANJA" msdata:DataType="MySql.Data.Types.MySqlDateTime, MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" msprop:Generator_ColumnVarNameInTable="columnAKCTRG_DATUM_SLANJA" msprop:Generator_ColumnPropNameInRow="AKCTRG_DATUM_SLANJA" msprop:Generator_ColumnPropNameInTable="AKCTRG_DATUM_SLANJAColumn" msprop:Generator_UserColumnName="AKCTRG_DATUM_SLANJA" type="xs:anyType" minOccurs="0" />
+              <xs:element name="AKCTRG_USPJELO" msprop:Generator_ColumnVarNameInTable="columnAKCTRG_USPJELO" msprop:Generator_ColumnPropNameInRow="AKCTRG_USPJELO" msprop:Generator_ColumnPropNameInTable="AKCTRG_USPJELOColumn" msprop:Generator_UserColumnName="AKCTRG_USPJELO" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="snizenja" msprop:Generator_TableClassName="snizenjaDataTable" msprop:Generator_TableVarName="tablesnizenja" msprop:Generator_RowChangedName="snizenjaRowChanged" msprop:Generator_TablePropName="snizenja" msprop:Generator_RowDeletingName="snizenjaRowDeleting" msprop:Generator_RowChangingName="snizenjaRowChanging" msprop:Generator_RowEvHandlerName="snizenjaRowChangeEventHandler" msprop:Generator_RowDeletedName="snizenjaRowDeleted" msprop:Generator_RowClassName="snizenjaRow" msprop:Generator_UserTableName="snizenja" msprop:Generator_RowEvArgName="snizenjaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="akc_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnakc_ID" msprop:Generator_ColumnPropNameInRow="akc_ID" msprop:Generator_ColumnPropNameInTable="akc_IDColumn" msprop:Generator_UserColumnName="akc_ID" type="xs:int" />
+              <xs:element name="AKC_BROJ" msprop:Generator_ColumnVarNameInTable="columnAKC_BROJ" msprop:Generator_ColumnPropNameInRow="AKC_BROJ" msprop:Generator_ColumnPropNameInTable="AKC_BROJColumn" msprop:Generator_UserColumnName="AKC_BROJ">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="21" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AKC_DATUMOD" msdata:DataType="MySql.Data.Types.MySqlDateTime, MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" msprop:Generator_ColumnVarNameInTable="columnAKC_DATUMOD" msprop:Generator_ColumnPropNameInRow="AKC_DATUMOD" msprop:Generator_ColumnPropNameInTable="AKC_DATUMODColumn" msprop:Generator_UserColumnName="AKC_DATUMOD" type="xs:anyType" minOccurs="0" />
+              <xs:element name="AKC_DATUMDO" msdata:DataType="MySql.Data.Types.MySqlDateTime, MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" msprop:Generator_ColumnVarNameInTable="columnAKC_DATUMDO" msprop:Generator_ColumnPropNameInRow="AKC_DATUMDO" msprop:Generator_ColumnPropNameInTable="AKC_DATUMDOColumn" msprop:Generator_UserColumnName="AKC_DATUMDO" type="xs:anyType" minOccurs="0" />
+              <xs:element name="AKC_OPIS" msprop:Generator_ColumnVarNameInTable="columnAKC_OPIS" msprop:Generator_ColumnPropNameInRow="AKC_OPIS" msprop:Generator_ColumnPropNameInTable="AKC_OPISColumn" msprop:Generator_UserColumnName="AKC_OPIS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="90" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AKC_AKTIVNA" msprop:Generator_ColumnVarNameInTable="columnAKC_AKTIVNA" msprop:Generator_ColumnPropNameInRow="AKC_AKTIVNA" msprop:Generator_ColumnPropNameInTable="AKC_AKTIVNAColumn" msprop:Generator_UserColumnName="AKC_AKTIVNA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AKC_POPUST" msprop:Generator_ColumnVarNameInTable="columnAKC_POPUST" msprop:Generator_ColumnPropNameInRow="AKC_POPUST" msprop:Generator_ColumnPropNameInTable="AKC_POPUSTColumn" msprop:Generator_UserColumnName="AKC_POPUST" type="xs:decimal" />
+              <xs:element name="operater" msprop:Generator_ColumnVarNameInTable="columnoperater" msprop:Generator_ColumnPropNameInRow="operater" msprop:Generator_ColumnPropNameInTable="operaterColumn" msprop:Generator_UserColumnName="operater" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="91" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AKC_VRIJEDNOSTSNIZENJA" msprop:Generator_ColumnVarNameInTable="columnAKC_VRIJEDNOSTSNIZENJA" msprop:Generator_ColumnPropNameInRow="AKC_VRIJEDNOSTSNIZENJA" msprop:Generator_ColumnPropNameInTable="AKC_VRIJEDNOSTSNIZENJAColumn" msprop:Generator_UserColumnName="AKC_VRIJEDNOSTSNIZENJA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AKC_DATUMIZMJENE" msdata:DataType="MySql.Data.Types.MySqlDateTime, MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" msprop:Generator_ColumnVarNameInTable="columnAKC_DATUMIZMJENE" msprop:Generator_ColumnPropNameInRow="AKC_DATUMIZMJENE" msprop:Generator_ColumnPropNameInTable="AKC_DATUMIZMJENEColumn" msprop:Generator_UserColumnName="AKC_DATUMIZMJENE" type="xs:anyType" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Akcije" />
+      <xs:field xpath="mstns:AKC_BROJ" />
+    </xs:unique>
+    <xs:unique name="Constraint2" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Akcije" />
+      <xs:field xpath="mstns:akc_ID" />
+      <xs:field xpath="mstns:POK_SIFRA" />
+    </xs:unique>
+    <xs:unique name="snizenja_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:snizenja" />
+      <xs:field xpath="mstns:akc_ID" />
+    </xs:unique>
+    <xs:unique name="snizenja_Constraint2" msdata:ConstraintName="Constraint2">
+      <xs:selector xpath=".//mstns:snizenja" />
+      <xs:field xpath="mstns:AKC_BROJ" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

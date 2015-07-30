@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="02/09/2012 10:33:03" ReportInfo.Modified="07/04/2012 13:20:25" ReportInfo.CreatorVersion="1.4.19.0">
+  <Dictionary>
+    <TableDataSource Name="Artikli" ReferenceName="Data.Artikli" DataType="System.Int32" Enabled="true">
+      <Column Name="doa_ID" DataType="System.Int32"/>
+      <Column Name="artikl_ar_ID" DataType="System.Int32"/>
+      <Column Name="partneri_PA_ID" DataType="System.Int32"/>
+      <Column Name="doa_zadnjiulaz" DataType="System.Decimal"/>
+      <Column Name="doa_kumulativulaz" DataType="System.Decimal"/>
+      <Column Name="doa_nabcij" DataType="System.Decimal"/>
+      <Column Name="doa_tvornickacijena" DataType="System.Decimal"/>
+      <Column Name="doa_postorabata" DataType="System.Decimal"/>
+      <Column Name="doa_sifraKodDobavljaca" DataType="System.String"/>
+      <Column Name="doa_glavniDobavljac" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="doa_A" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="doa_B" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="doa_C" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="doa_D" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="doa_X" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="doa_skladiste" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="ar_naziv" DataType="System.String"/>
+      <Column Name="AR_PAKiranje" DataType="System.Decimal"/>
+      <Column Name="ar_a" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="ar_b" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="ar_c" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="ar_d" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="ar_x" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="ar_pakiranjetrgovina" DataType="System.Decimal"/>
+      <Column Name="ar_nenarucuj" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="bk_kod" DataType="System.String"/>
+      <Column Name="PA_NAZIV" DataType="System.String"/>
+      <Column Name="ar_sifra" DataType="System.String"/>
+    </TableDataSource>
+    <Parameter Name="TipTrg" DataType="System.String"/>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="226.8">
+      <TableObject Name="Table1" Left="47.25" Top="28.35" Width="226.8" Height="113.4">
+        <TableColumn Name="Column1" Width="226.8"/>
+        <TableRow Name="Row1">
+          <TableCell Name="Cell1" Text="Boso d.o.o." Font="Arial, 10pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row2">
+          <TableCell Name="Cell6" Text="H.D.Genschera 22d"/>
+        </TableRow>
+        <TableRow Name="Row3">
+          <TableCell Name="Cell11" Text="32100 Vinkovci"/>
+        </TableRow>
+        <TableRow Name="Row4">
+          <TableCell Name="Cell16" Text="OIB: 91958721295"/>
+        </TableRow>
+        <TableRow Name="Row5">
+          <TableCell Name="Cell21" Text="Žiro: 2402006-1100064189"/>
+        </TableRow>
+        <TableRow Name="Row6">
+          <TableCell Name="Cell22" Text="Tel/fax: 032/341-200 ; 032/354-727"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="Text8" Left="491.4" Top="18.9" Width="207.9" Height="18.9" Text="Izrađeno: [Date]" Format="Date" Format.Format="f" Font="Arial, 8pt"/>
+      <TextObject Name="Text9" Left="189" Top="160.65" Width="415.8" Height="18.9" Text="Ambulantna dostava po tipu objekta za dobavljača&#13;&#10;" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text7" Left="-9450" Top="-9450" Width="94.5" Height="18.9" Text="[PageN]"/>
+      <TextObject Name="Text21" Left="-9450" Top="-9450" Width="94.5" Height="18.9" Text="[PageN]"/>
+      <TextObject Name="Text10" Left="170.1" Top="189" Width="463.05" Height="18.9" Text="[Artikli.PA_NAZIV]" HorzAlign="Center" Font="Arial, 11.25pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="230.8" Width="718.2" Height="28.35" Border.Lines="Top, Bottom" Fill.Color="Gainsboro">
+      <TextObject Name="Text2" Left="-4" Top="5.45" Width="48.7" Height="18.9" Text="Rbr."/>
+      <TextObject Name="Text4" Left="45.05" Top="5.45" Width="332.4" Height="18.9" Text="Artikl&#13;&#10;"/>
+      <TextObject Name="Text5" Left="444.15" Top="5.45" Width="54.9" Height="18.9" Text="A" HorzAlign="Center"/>
+      <TextObject Name="Text14" Left="500.4" Top="5.45" Width="54.9" Height="18.9" Text="B&#13;&#10;" HorzAlign="Center"/>
+      <TextObject Name="Text11" Left="554" Top="5.45" Width="54.9" Height="18.9" Text="C" HorzAlign="Center"/>
+      <TextObject Name="Text12" Left="608.25" Top="5.45" Width="54.9" Height="18.9" Text="D" HorzAlign="Center"/>
+      <TextObject Name="Text13" Left="664.5" Top="5.45" Width="54.9" Height="18.9" Text="X" HorzAlign="Center"/>
+      <TextObject Name="Text3" Left="376" Top="5" Width="67.5" Height="18.9" Text="Šifra&#13;&#10;"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="263.15" Width="718.2" Height="29.9" DataSource="Artikli">
+      <TextObject Name="Text23" Left="444.25" Top="-0.6" Width="54.15" Height="18.9" Text="[IIf(ToString([Artikli.doa_A]) == &quot;True&quot;,&quot;Da&quot;,&quot;Ne&quot;)]" HorzAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text24" Left="499.35" Top="-0.6" Width="53.15" Height="18.9" Text="[IIf(ToString([Artikli.doa_B]) == &quot;True&quot;,&quot;Da&quot;,&quot;Ne&quot;)]" HorzAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text25" Left="553.35" Top="-0.6" Width="55.15" Height="18.9" Text="[IIf(ToString([Artikli.doa_C]) == &quot;True&quot;,&quot;Da&quot;,&quot;Ne&quot;)]" HorzAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text26" Left="608.9" Top="-0.6" Width="53.15" Height="18.9" Text="[IIf(ToString([Artikli.doa_D]) == &quot;True&quot;,&quot;Da&quot;,&quot;Ne&quot;)]" HorzAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text27" Left="663.45" Top="-0.6" Width="54.15" Height="18.9" Text="[IIf(ToString([Artikli.doa_X]) == &quot;True&quot;,&quot;Da&quot;,&quot;Ne&quot;)]" HorzAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text6" Left="-4" Width="47.25" Height="18.9" Text="[Row#]." HorzAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text29" Left="155.1" Width="221.9" Height="29.9" Text="[Artikli.ar_naziv]" Font="Arial, 9pt"/>
+      <TextObject Name="Text1" Left="44.25" Width="109.5" Height="18.9" Text="[Artikli.bk_kod]"/>
+      <TextObject Name="Text15" Left="378" Width="65.5" Height="18.9" Text="[Artikli.ar_sifra]"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="297.05" Width="718.2" Height="18.9">
+      <TextObject Name="Text22" Left="642.6" Width="94.5" Height="18.9" Text="[PageN]"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

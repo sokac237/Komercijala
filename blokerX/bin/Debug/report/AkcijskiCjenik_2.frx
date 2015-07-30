@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="01/31/2012 13:01:33" ReportInfo.Modified="01/14/2013 08:41:14" ReportInfo.CreatorVersion="1.4.19.0">
+  <Dictionary>
+    <TableDataSource Name="Artikli" ReferenceName="Data.Artikli" DataType="System.Int32" Enabled="true">
+      <Column Name="prc_ID" DataType="System.Int32"/>
+      <Column Name="prc_vaziod" DataType="System.DateTime"/>
+      <Column Name="prc_vazido" DataType="System.DateTime"/>
+      <Column Name="partner_PA_ID" DataType="System.Int32"/>
+      <Column Name="prc_opis" DataType="System.String"/>
+      <Column Name="prc_nivo" DataType="System.Int32"/>
+      <Column Name="prc_aktivan" DataType="System.SByte"/>
+      <Column Name="prc_datizmjene" DataType="System.DateTime"/>
+      <Column Name="operater_op_ID" DataType="System.Int32"/>
+      <Column Name="pa_naziv" DataType="System.String"/>
+      <Column Name="prc_ID1" DataType="System.Int32"/>
+      <Column Name="prodajnicjenik_prc_ID" DataType="System.Int32"/>
+      <Column Name="prc_aktivna" DataType="System.SByte"/>
+      <Column Name="prc_tipa" DataType="System.Decimal"/>
+      <Column Name="prc_tipb" DataType="System.Decimal"/>
+      <Column Name="prc_tipc" DataType="System.Decimal"/>
+      <Column Name="prc_tipd" DataType="System.Decimal"/>
+      <Column Name="prc_tipx" DataType="System.Decimal"/>
+      <Column Name="prc_napomena" DataType="System.String"/>
+      <Column Name="prc_letak" DataType="System.Decimal"/>
+      <Column Name="artikl_ar_ID" DataType="System.Int32"/>
+      <Column Name="AR_SIFRA" DataType="System.String"/>
+      <Column Name="AR_NAZIV" DataType="System.String"/>
+      <Column Name="partner_pa_id1" DataType="System.Int32"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" Landscape="true" PaperWidth="297" PaperHeight="210" RawPaperSize="9" FirstPageSource="15" OtherPagesSource="15">
+    <ReportTitleBand Name="ReportTitle1" Width="1047.06" Height="264.6">
+      <TextObject Name="Text1" Left="47.25" Top="47.25" Width="141.75" Height="47.25" Text="Boso d.o.o&#13;&#10;H.D.Genschera 22 b&#13;&#10;32100 Vinkovci" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text2" Left="340.2" Top="103.95" Width="359.1" Height="18.9" Text="PREGLED CJENIKA&#13;&#10;" HorzAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text7" Left="812.7" Top="18.9" Width="217.35" Height="18.9" Text="Izrađeno:[Date]"/>
+      <TextObject Name="Text3" Left="28.35" Top="160.65" Width="236.25" Height="18.9" Text="Broj cjenika: [Artikli.prc_ID]"/>
+      <TextObject Name="Text20" Left="28.35" Top="183" Width="236.25" Height="18.9" Text="Važi od: [Artikli.prc_vaziod]"/>
+      <TextObject Name="Text21" Left="27.35" Top="206.35" Width="236.25" Height="18.9" Text="Važi do: [Artikli.prc_vazido]"/>
+      <TextObject Name="Text22" Left="27.35" Top="230.7" Width="236.25" Height="18.9" Text="Aktivan : [Artikli.prc_aktivan]&#13;&#10; "/>
+      <TextObject Name="Text29" Left="368.55" Top="160.65" Width="340.2" Height="18.9" Text="Naziv akcije: [Artikli.prc_opis]" Font="Arial, 12pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="268.6" Width="1047.06" Height="18.9" Border.Lines="Top, Bottom" Fill.Color="Gainsboro">
+      <TextObject Name="Text4" Left="18.9" Width="37.8" Height="18.9" Text="R.br.&#13;&#10;"/>
+      <TextObject Name="Text8" Left="56.7" Width="85.05" Height="18.9" Text="Šifra&#13;&#10;"/>
+      <TextObject Name="Text5" Left="141.75" Width="217.35" Height="18.9" Text="Naziv artikla&#13;&#10;&#13;&#10;"/>
+      <TextObject Name="Text6" Left="359.1" Width="94.5" Height="18.9" Text="Tip A"/>
+      <TextObject Name="Text9" Left="453.6" Width="85.05" Height="18.9" Text="Tip B"/>
+      <TextObject Name="Text10" Left="538.65" Width="94.5" Height="18.9" Text="Tip C"/>
+      <TextObject Name="Text11" Left="633.15" Width="85.05" Height="18.9" Text="Tip D"/>
+      <TextObject Name="Text23" Left="718.2" Width="85.05" Height="18.9" Text="Tip X"/>
+      <TextObject Name="Text24" Left="803.25" Width="85.05" Height="18.9" Text="Cijena letka&#13;&#10;"/>
+      <TextObject Name="Text25" Left="888.3" Width="141.75" Height="18.9" Text="Napomena&#13;&#10;"/>
+    </PageHeaderBand>
+    <GroupHeaderBand Name="GroupHeader1" Top="291.5" Width="1047.06" Height="37.8" Condition="[Artikli.partner_pa_id1]">
+      <TextObject Name="Text30" Left="56.7" Top="9.45" Width="311.85" Height="18.9" Border.Lines="Bottom" Text="[Artikli.pa_naziv]"/>
+      <DataBand Name="Data1" Top="333.3" Width="1047.06" Height="29.9" DataSource="Artikli">
+        <TextObject Name="Text15" Left="359.1" Top="3" Width="94.5" Height="18.9" Text="[Artikli.prc_tipa]" Format="Currency" Format.UseLocale="true" WordWrap="false" Font="Arial, 8.25pt" Trimming="EllipsisCharacter"/>
+        <TextObject Name="Text27" Left="803.25" Top="3" Width="85.05" Height="18.9" Text="[Artikli.prc_letak]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" WordWrap="false" Font="Arial, 8.25pt" Trimming="EllipsisCharacter"/>
+        <TextObject Name="Text12" Left="18.9" Top="3" Width="37.8" Height="18.9" Text="[Row#]." Font="Arial, 8.25pt"/>
+        <TextObject Name="Text13" Left="56.7" Top="3" Width="85.05" Height="18.9" Text="[Artikli.AR_SIFRA]" Font="Arial, 8.25pt"/>
+        <TextObject Name="Text14" Left="141.75" Top="3" Width="217.35" Height="26.9" CanGrow="true" GrowToBottom="true" Text="[Artikli.AR_NAZIV]" Font="Arial, 8.25pt"/>
+        <TextObject Name="Text16" Left="453.6" Top="3" Width="85.05" Height="18.9" Text="[Artikli.prc_tipb]" Format="Currency" Format.UseLocale="true" WordWrap="false" Font="Arial, 8.25pt" Trimming="EllipsisCharacter"/>
+        <TextObject Name="Text17" Left="538.65" Top="3" Width="94.5" Height="18.9" Text="[Artikli.prc_tipc]" Format="Currency" Format.UseLocale="true" WordWrap="false" Font="Arial, 8.25pt" Trimming="EllipsisCharacter"/>
+        <TextObject Name="Text18" Left="633.15" Top="3" Width="85.05" Height="18.9" Text="[Artikli.prc_tipd]" Format="Currency" Format.UseLocale="true" WordWrap="false" Font="Arial, 8.25pt" Trimming="EllipsisCharacter"/>
+        <TextObject Name="Text26" Left="718.2" Top="3" Width="85.05" Height="18.9" Text="[Artikli.prc_tipx]" Format="Currency" Format.UseLocale="true" WordWrap="false" Font="Arial, 8.25pt" Trimming="EllipsisCharacter"/>
+        <TextObject Name="Text28" Left="888.3" Top="3" Width="141.75" Height="18.9" Text="[Artikli.prc_napomena]" Font="Arial, 8.25pt"/>
+        <Sort>
+          <Sort Expression="[Artikli.pa_naziv]"/>
+        </Sort>
+      </DataBand>
+    </GroupHeaderBand>
+    <PageFooterBand Name="PageFooter1" Top="367.2" Width="1047.06" Height="18.9">
+      <TextObject Name="Text19" Left="935.55" Width="94.5" Height="18.9" Text="[PageN]"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

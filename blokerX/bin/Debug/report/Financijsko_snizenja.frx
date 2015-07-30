@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="02/09/2012 14:55:27" ReportInfo.Modified="12/18/2014 12:07:18" ReportInfo.CreatorVersion="1.4.19.0">
+  <Dictionary>
+    <TableDataSource Name="Financijsko" ReferenceName="Data.Financijsko" DataType="System.Int32" Enabled="true">
+      <Column Name="pa_sifra" DataType="System.String"/>
+      <Column Name="PA_NAZIV" DataType="System.String"/>
+      <Column Name="gr_datum" DataType="MySql.Data.Types.MySqlDateTime, MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"/>
+      <Column Name="akc_broj" DataType="System.String"/>
+      <Column Name="gr_vrijednostsnizenja" DataType="System.Decimal"/>
+      <Column Name="gr_zapisnik" DataType="System.String"/>
+      <Column Name="po_sifra" DataType="System.String"/>
+      <Column Name="po_naziv" DataType="System.String"/>
+    </TableDataSource>
+    <Parameter Name="Mjesec" DataType="System.String"/>
+    <Total Name="suma" Expression="[Financijsko.gr_vrijednostsnizenja]" Evaluator="Data3"/>
+  </Dictionary>
+  <ReportPage Name="Page3">
+    <ReportTitleBand Name="ReportTitle3" Width="718.2" Height="321.3">
+      <TableObject Name="Table2" Left="37.8" Top="47.25" Width="226.8" Height="113.4">
+        <TableColumn Name="Column1" Width="226.8"/>
+        <TableRow Name="Row1">
+          <TableCell Name="Cell1" Text="Boso d.o.o." Font="Arial, 10pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row2">
+          <TableCell Name="Cell6" Text="H.D.Genschera 22d"/>
+        </TableRow>
+        <TableRow Name="Row3">
+          <TableCell Name="Cell11" Text="32100 Vinkovci"/>
+        </TableRow>
+        <TableRow Name="Row4">
+          <TableCell Name="Cell16" Text="OIB: 91958721295"/>
+        </TableRow>
+        <TableRow Name="Row5">
+          <TableCell Name="Cell21" Text="Žiro: 2402006-1100064189"/>
+        </TableRow>
+        <TableRow Name="Row6">
+          <TableCell Name="Cell22" Text="Tel/fax: 032/341-200 ; 032/354-727"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="Text8" Left="491.4" Top="18.9" Width="207.9" Height="18.9" Text="Izrađeno: [Date]" Format="Date" Format.Format="f" Font="Arial, 8pt"/>
+      <TextObject Name="Text9" Left="170.1" Top="198.45" Width="415.8" Height="18.9" Text="Vrijednost sniženja broj: [Financijsko.akc_broj]" HorzAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text1" Left="18.9" Top="245.7" Width="652.05" Height="18.9" Text="Partner: [Financijsko.pa_sifra] / [Financijsko.PA_NAZIV]"/>
+      <TextObject Name="Text2" Left="18.9" Top="274.05" Width="387.45" Height="18.9" Text="Dokument partnera: [Financijsko.gr_zapisnik]"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader2" Top="325.3" Width="718.2" Height="28.35" Border.Lines="All" Fill.Color="LightGray">
+      <TextObject Name="Text3" Left="75.6" Top="5.45" Width="56.7" Height="18.9" Text="Rbr."/>
+      <TextObject Name="Text4" Left="141.75" Top="5.45" Width="321.3" Height="18.9" Text="šifra / naziv trgovine"/>
+      <TextObject Name="Text5" Left="463.05" Top="5.45" Width="94.5" Height="18.9" Text="vrijednost"/>
+    </PageHeaderBand>
+    <DataBand Name="Data3" Top="357.65" Width="718.2" Height="37.8" Border.Lines="Bottom" DataSource="Financijsko">
+      <TextObject Name="Text6" Left="75.05" Top="5.9" Width="58.5" Height="18.9" Text="[Row#]."/>
+      <TextObject Name="Text7" Left="141.75" Top="5.45" Width="321.3" Height="18.9" Text="[Financijsko.po_sifra] / [Financijsko.po_naziv]"/>
+      <TextObject Name="Text10" Left="463.05" Top="5.45" Width="94.5" Height="18.9" Text="[Financijsko.gr_vrijednostsnizenja]" Format="Currency" Format.UseLocale="true"/>
+      <DataFooterBand Name="DataFooter1" Top="399.45" Width="718.2" Height="37.8">
+        <TextObject Name="Text11" Left="368.55" Top="9.45" Width="94.5" Height="18.9" Text="UKUPNO:" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text12" Left="463.05" Top="9.45" Width="94.5" Height="18.9" Text="[suma]" Format="Currency" Format.UseLocale="true" Font="Arial, 10pt, style=Bold"/>
+      </DataFooterBand>
+      <Sort>
+        <Sort Expression="[Financijsko.po_sifra]"/>
+      </Sort>
+    </DataBand>
+    <PageFooterBand Name="PageFooter3" Top="441.25" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>

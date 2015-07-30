@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ArtikliKojiSeMoguNivelirati" targetNamespace="http://tempuri.org/ArtikliKojiSeMoguNivelirati.xsd" xmlns:mstns="http://tempuri.org/ArtikliKojiSeMoguNivelirati.xsd" xmlns="http://tempuri.org/ArtikliKojiSeMoguNivelirati.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="boso2011ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="boso2011ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.blokerX.Properties.Settings.GlobalReference.Default.boso2011ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ArtikliNiveliranjeTableAdapter" GeneratorDataComponentClassName="ArtikliNiveliranjeTableAdapter" Name="ArtikliNiveliranje" UserDataComponentName="ArtikliNiveliranjeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="boso2011ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select  dozvoljenanivelacijazag.*, operater.op_sifra, concat(operater.op_ime,' ',operater.op_prezime) ,count(dozvoljenanivelacijaartikl.artikl_AR_ID ) 
+from operater, dozvoljenanivelacijazag left outer join dozvoljenanivelacijaartikl on dozvoljenanivelacijaartikl.dozvoljenanivelacijazag_ID = dozvoljenanivelacijazag.dnz_ID  where  operater.op_ID =dozvoljenanivelacijazag.operater_OP_ID  group by dozvoljenanivelacijazag.dnz_ID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="dnz_ID" DataSetColumn="dnz_ID" />
+              <Mapping SourceColumn="operater_OP_ID" DataSetColumn="operater_OP_ID" />
+              <Mapping SourceColumn="poslovnica_PO_Id" DataSetColumn="poslovnica_PO_Id" />
+              <Mapping SourceColumn="dnz_odkada" DataSetColumn="dnz_odkada" />
+              <Mapping SourceColumn="dnz_dokada" DataSetColumn="dnz_dokada" />
+              <Mapping SourceColumn="dnz_opis" DataSetColumn="dnz_opis" />
+              <Mapping SourceColumn="dnz_datumizrade" DataSetColumn="dnz_datumizrade" />
+              <Mapping SourceColumn="op_sifra" DataSetColumn="op_sifra" />
+              <Mapping SourceColumn="concat(operater.op_ime,' ',operater.op_prezime)" DataSetColumn="concat(operater_op_ime,' ',operater_op_prezime)" />
+              <Mapping SourceColumn="count(dozvoljenanivelacijaartikl.artikl_AR_ID )" DataSetColumn="count(dozvoljenanivelacijaartikl_artikl_AR_ID )" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="pregledNivelacijeTableAdapter" GeneratorDataComponentClassName="pregledNivelacijeTableAdapter" Name="pregledNivelacije" UserDataComponentName="pregledNivelacijeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="boso2011ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select dozvoljenanivelacijazag.dnz_ID, dozvoljenanivelacijazag.dnz_opis, dozvoljenanivelacijazag.dnz_odkada, dozvoljenanivelacijazag.dnz_dokada, artikl.AR_SIFRA, artikl.AR_NAZIV, dozvoljenanivelacija.dn_preporucenacijena,  poslovnica.po_sifra, poslovnica.po_naziv from  dozvoljenanivelacijazag,  dozvoljenanivelacija left join artikl on artikl.ar_ID = dozvoljenanivelacija.artikl_AR_ID  left join poslovnica on poslovnica.po_id= dozvoljenanivelacija.poslovnica_po_ID where   dozvoljenanivelacija.dozvoljenaNivelacijaZag_dnz_id =dozvoljenanivelacijazag.dnz_ID and dozvoljenanivelacijazag.dnz_odkada &gt;= @datOD and dozvoljenanivelacijazag.dnz_dokada &lt;= @datDO</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="datOD" ColumnName="dnz_odkada" DataSourceName="boso2011.dozvoljenanivelacijazag" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@datOD" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="dnz_odkada" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="datDO" ColumnName="dnz_dokada" DataSourceName="boso2011.dozvoljenanivelacijazag" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@datDO" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="dnz_dokada" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="dnz_ID" DataSetColumn="dnz_ID" />
+              <Mapping SourceColumn="dnz_opis" DataSetColumn="dnz_opis" />
+              <Mapping SourceColumn="dnz_odkada" DataSetColumn="dnz_odkada" />
+              <Mapping SourceColumn="dnz_dokada" DataSetColumn="dnz_dokada" />
+              <Mapping SourceColumn="AR_SIFRA" DataSetColumn="AR_SIFRA" />
+              <Mapping SourceColumn="AR_NAZIV" DataSetColumn="AR_NAZIV" />
+              <Mapping SourceColumn="dn_preporucenacijena" DataSetColumn="dn_preporucenacijena" />
+              <Mapping SourceColumn="po_sifra" DataSetColumn="po_sifra" />
+              <Mapping SourceColumn="po_naziv" DataSetColumn="po_naziv" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ArtikliKojiSeMoguNivelirati" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ArtikliKojiSeMoguNivelirati" msprop:Generator_UserDSName="ArtikliKojiSeMoguNivelirati">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ArtikliNiveliranje" msprop:Generator_TableClassName="ArtikliNiveliranjeDataTable" msprop:Generator_TableVarName="tableArtikliNiveliranje" msprop:Generator_TablePropName="ArtikliNiveliranje" msprop:Generator_RowDeletingName="ArtikliNiveliranjeRowDeleting" msprop:Generator_UserTableName="ArtikliNiveliranje" msprop:Generator_RowChangingName="ArtikliNiveliranjeRowChanging" msprop:Generator_RowEvHandlerName="ArtikliNiveliranjeRowChangeEventHandler" msprop:Generator_RowDeletedName="ArtikliNiveliranjeRowDeleted" msprop:Generator_RowEvArgName="ArtikliNiveliranjeRowChangeEvent" msprop:Generator_RowChangedName="ArtikliNiveliranjeRowChanged" msprop:Generator_RowClassName="ArtikliNiveliranjeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dnz_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columndnz_ID" msprop:Generator_ColumnPropNameInRow="dnz_ID" msprop:Generator_ColumnPropNameInTable="dnz_IDColumn" msprop:Generator_UserColumnName="dnz_ID" type="xs:int" />
+              <xs:element name="operater_OP_ID" msprop:Generator_ColumnVarNameInTable="columnoperater_OP_ID" msprop:Generator_ColumnPropNameInRow="operater_OP_ID" msprop:Generator_ColumnPropNameInTable="operater_OP_IDColumn" msprop:Generator_UserColumnName="operater_OP_ID" type="xs:int" />
+              <xs:element name="poslovnica_PO_Id" msprop:Generator_ColumnVarNameInTable="columnposlovnica_PO_Id" msprop:Generator_ColumnPropNameInRow="poslovnica_PO_Id" msprop:Generator_ColumnPropNameInTable="poslovnica_PO_IdColumn" msprop:Generator_UserColumnName="poslovnica_PO_Id" type="xs:int" />
+              <xs:element name="dnz_odkada" msdata:DataType="MySql.Data.Types.MySqlDateTime, MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" msprop:Generator_ColumnVarNameInTable="columndnz_odkada" msprop:Generator_ColumnPropNameInRow="dnz_odkada" msprop:Generator_ColumnPropNameInTable="dnz_odkadaColumn" msprop:Generator_UserColumnName="dnz_odkada" type="xs:anyType" />
+              <xs:element name="dnz_dokada" msdata:DataType="MySql.Data.Types.MySqlDateTime, MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" msprop:Generator_ColumnVarNameInTable="columndnz_dokada" msprop:Generator_ColumnPropNameInRow="dnz_dokada" msprop:Generator_ColumnPropNameInTable="dnz_dokadaColumn" msprop:Generator_UserColumnName="dnz_dokada" type="xs:anyType" />
+              <xs:element name="dnz_opis" msprop:Generator_ColumnVarNameInTable="columndnz_opis" msprop:Generator_ColumnPropNameInRow="dnz_opis" msprop:Generator_ColumnPropNameInTable="dnz_opisColumn" msprop:Generator_UserColumnName="dnz_opis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dnz_datumizrade" msdata:DataType="MySql.Data.Types.MySqlDateTime, MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" msprop:Generator_ColumnVarNameInTable="columndnz_datumizrade" msprop:Generator_ColumnPropNameInRow="dnz_datumizrade" msprop:Generator_ColumnPropNameInTable="dnz_datumizradeColumn" msprop:Generator_UserColumnName="dnz_datumizrade" type="xs:anyType" />
+              <xs:element name="op_sifra" msprop:Generator_ColumnVarNameInTable="columnop_sifra" msprop:Generator_ColumnPropNameInRow="op_sifra" msprop:Generator_ColumnPropNameInTable="op_sifraColumn" msprop:Generator_UserColumnName="op_sifra">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="concat_x0028_operater_op_ime_x002C__x0027__x0020__x0027__x002C_operater_op_prezime_x0029_" msdata:Caption="concat(operater.op_ime,' ',operater.op_prezime)" msprop:Generator_ColumnVarNameInTable="_columnconcat_operater_op_ime_____operater_op_prezime_" msprop:Generator_ColumnPropNameInRow="_concat_operater_op_ime_____operater_op_prezime_" msprop:Generator_ColumnPropNameInTable="_concat_operater_op_ime_____operater_op_prezime_Column" msprop:Generator_UserColumnName="concat(operater_op_ime,' ',operater_op_prezime)" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="91" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="count_x0028_dozvoljenanivelacijaartikl_artikl_AR_ID_x0020__x0029_" msdata:Caption="count(dozvoljenanivelacijaartikl.artikl_AR_ID )" msprop:Generator_ColumnVarNameInTable="_columncount_dozvoljenanivelacijaartikl_artikl_AR_ID__" msprop:Generator_ColumnPropNameInRow="_count_dozvoljenanivelacijaartikl_artikl_AR_ID__" msprop:Generator_ColumnPropNameInTable="_count_dozvoljenanivelacijaartikl_artikl_AR_ID__Column" msprop:Generator_UserColumnName="count(dozvoljenanivelacijaartikl_artikl_AR_ID )" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pregledNivelacije" msprop:Generator_TableClassName="pregledNivelacijeDataTable" msprop:Generator_TableVarName="tablepregledNivelacije" msprop:Generator_TablePropName="pregledNivelacije" msprop:Generator_RowDeletingName="pregledNivelacijeRowDeleting" msprop:Generator_UserTableName="pregledNivelacije" msprop:Generator_RowChangingName="pregledNivelacijeRowChanging" msprop:Generator_RowEvHandlerName="pregledNivelacijeRowChangeEventHandler" msprop:Generator_RowDeletedName="pregledNivelacijeRowDeleted" msprop:Generator_RowEvArgName="pregledNivelacijeRowChangeEvent" msprop:Generator_RowChangedName="pregledNivelacijeRowChanged" msprop:Generator_RowClassName="pregledNivelacijeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dnz_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columndnz_ID" msprop:Generator_ColumnPropNameInRow="dnz_ID" msprop:Generator_ColumnPropNameInTable="dnz_IDColumn" msprop:Generator_UserColumnName="dnz_ID" type="xs:int" />
+              <xs:element name="dnz_opis" msprop:Generator_ColumnVarNameInTable="columndnz_opis" msprop:Generator_ColumnPropNameInRow="dnz_opis" msprop:Generator_ColumnPropNameInTable="dnz_opisColumn" msprop:Generator_UserColumnName="dnz_opis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dnz_odkada" msdata:DataType="MySql.Data.Types.MySqlDateTime, MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" msprop:Generator_ColumnVarNameInTable="columndnz_odkada" msprop:Generator_ColumnPropNameInRow="dnz_odkada" msprop:Generator_ColumnPropNameInTable="dnz_odkadaColumn" msprop:Generator_UserColumnName="dnz_odkada" type="xs:anyType" />
+              <xs:element name="dnz_dokada" msdata:DataType="MySql.Data.Types.MySqlDateTime, MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" msprop:Generator_ColumnVarNameInTable="columndnz_dokada" msprop:Generator_ColumnPropNameInRow="dnz_dokada" msprop:Generator_ColumnPropNameInTable="dnz_dokadaColumn" msprop:Generator_UserColumnName="dnz_dokada" type="xs:anyType" />
+              <xs:element name="AR_SIFRA" msprop:Generator_ColumnVarNameInTable="columnAR_SIFRA" msprop:Generator_ColumnPropNameInRow="AR_SIFRA" msprop:Generator_ColumnPropNameInTable="AR_SIFRAColumn" msprop:Generator_UserColumnName="AR_SIFRA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AR_NAZIV" msprop:Generator_ColumnVarNameInTable="columnAR_NAZIV" msprop:Generator_ColumnPropNameInRow="AR_NAZIV" msprop:Generator_ColumnPropNameInTable="AR_NAZIVColumn" msprop:Generator_UserColumnName="AR_NAZIV" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="96" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dn_preporucenacijena" msprop:Generator_ColumnVarNameInTable="columndn_preporucenacijena" msprop:Generator_ColumnPropNameInRow="dn_preporucenacijena" msprop:Generator_ColumnPropNameInTable="dn_preporucenacijenaColumn" msprop:Generator_UserColumnName="dn_preporucenacijena" type="xs:decimal" minOccurs="0" />
+              <xs:element name="po_sifra" msprop:Generator_ColumnVarNameInTable="columnpo_sifra" msprop:Generator_ColumnPropNameInRow="po_sifra" msprop:Generator_ColumnPropNameInTable="po_sifraColumn" msprop:Generator_UserColumnName="po_sifra" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="po_naziv" msprop:Generator_ColumnVarNameInTable="columnpo_naziv" msprop:Generator_ColumnPropNameInRow="po_naziv" msprop:Generator_ColumnPropNameInTable="po_nazivColumn" msprop:Generator_UserColumnName="po_naziv" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ArtikliNiveliranje" />
+      <xs:field xpath="mstns:dnz_ID" />
+      <xs:field xpath="mstns:op_sifra" />
+    </xs:unique>
+    <xs:unique name="pregledNivelacije_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:pregledNivelacije" />
+      <xs:field xpath="mstns:dnz_ID" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:pregledNivelacije" />
+      <xs:field xpath="mstns:AR_SIFRA" />
+    </xs:unique>
+    <xs:unique name="Constraint3">
+      <xs:selector xpath=".//mstns:pregledNivelacije" />
+      <xs:field xpath="mstns:po_sifra" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

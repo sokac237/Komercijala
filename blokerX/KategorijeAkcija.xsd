@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="KategorijeAkcija" targetNamespace="http://tempuri.org/KategorijeAkcija.xsd" xmlns:mstns="http://tempuri.org/KategorijeAkcija.xsd" xmlns="http://tempuri.org/KategorijeAkcija.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="boso2011ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="boso2011ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.blokerX.Properties.Settings.GlobalReference.Default.boso2011ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="kategorijeAkcijaTableAdapter" GeneratorDataComponentClassName="kategorijeAkcijaTableAdapter" Name="kategorijeAkcija" UserDataComponentName="kategorijeAkcijaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="boso2011ConnectionString (Settings)" DbObjectName="boso2011.akcijakategorija" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select pok_sifra, pok_naziv, pok_vaziod, pok_vazido, pok_ispis, pok_izmjena, pok_aktivan from akcijakategorija where pok_aktivan = 1 and pok_sifra &lt;&gt; 16</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="pok_sifra" DataSetColumn="pok_sifra" />
+              <Mapping SourceColumn="pok_naziv" DataSetColumn="pok_naziv" />
+              <Mapping SourceColumn="pok_vaziod" DataSetColumn="pok_vaziod" />
+              <Mapping SourceColumn="pok_vazido" DataSetColumn="pok_vazido" />
+              <Mapping SourceColumn="pok_ispis" DataSetColumn="pok_ispis" />
+              <Mapping SourceColumn="pok_izmjena" DataSetColumn="pok_izmjena" />
+              <Mapping SourceColumn="pok_aktivan" DataSetColumn="pok_aktivan" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="KategorijeAkcija" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="KategorijeAkcija" msprop:Generator_UserDSName="KategorijeAkcija">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="kategorijeAkcija" msprop:Generator_TableClassName="kategorijeAkcijaDataTable" msprop:Generator_TableVarName="tablekategorijeAkcija" msprop:Generator_TablePropName="kategorijeAkcija" msprop:Generator_RowDeletingName="kategorijeAkcijaRowDeleting" msprop:Generator_UserTableName="kategorijeAkcija" msprop:Generator_RowChangingName="kategorijeAkcijaRowChanging" msprop:Generator_RowEvHandlerName="kategorijeAkcijaRowChangeEventHandler" msprop:Generator_RowDeletedName="kategorijeAkcijaRowDeleted" msprop:Generator_RowEvArgName="kategorijeAkcijaRowChangeEvent" msprop:Generator_RowChangedName="kategorijeAkcijaRowChanged" msprop:Generator_RowClassName="kategorijeAkcijaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pok_sifra" msprop:Generator_ColumnVarNameInTable="columnpok_sifra" msprop:Generator_ColumnPropNameInRow="pok_sifra" msprop:Generator_ColumnPropNameInTable="pok_sifraColumn" msprop:Generator_UserColumnName="pok_sifra" type="xs:byte" />
+              <xs:element name="pok_naziv" msprop:Generator_ColumnVarNameInTable="columnpok_naziv" msprop:Generator_ColumnPropNameInRow="pok_naziv" msprop:Generator_ColumnPropNameInTable="pok_nazivColumn" msprop:Generator_UserColumnName="pok_naziv" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pok_vaziod" msdata:DataType="MySql.Data.Types.MySqlDateTime, MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" msprop:Generator_ColumnVarNameInTable="columnpok_vaziod" msprop:Generator_ColumnPropNameInRow="pok_vaziod" msprop:Generator_ColumnPropNameInTable="pok_vaziodColumn" msprop:Generator_UserColumnName="pok_vaziod" type="xs:anyType" minOccurs="0" />
+              <xs:element name="pok_vazido" msdata:DataType="MySql.Data.Types.MySqlDateTime, MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" msprop:Generator_ColumnVarNameInTable="columnpok_vazido" msprop:Generator_ColumnPropNameInRow="pok_vazido" msprop:Generator_ColumnPropNameInTable="pok_vazidoColumn" msprop:Generator_UserColumnName="pok_vazido" type="xs:anyType" minOccurs="0" />
+              <xs:element name="pok_ispis" msprop:Generator_ColumnVarNameInTable="columnpok_ispis" msprop:Generator_ColumnPropNameInRow="pok_ispis" msprop:Generator_ColumnPropNameInTable="pok_ispisColumn" msprop:Generator_UserColumnName="pok_ispis" type="xs:boolean" />
+              <xs:element name="pok_izmjena" msprop:Generator_ColumnVarNameInTable="columnpok_izmjena" msprop:Generator_ColumnPropNameInRow="pok_izmjena" msprop:Generator_ColumnPropNameInTable="pok_izmjenaColumn" msprop:Generator_UserColumnName="pok_izmjena" type="xs:boolean" />
+              <xs:element name="pok_aktivan" msprop:Generator_ColumnVarNameInTable="columnpok_aktivan" msprop:Generator_ColumnPropNameInRow="pok_aktivan" msprop:Generator_ColumnPropNameInTable="pok_aktivanColumn" msprop:Generator_UserColumnName="pok_aktivan" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:kategorijeAkcija" />
+      <xs:field xpath="mstns:pok_sifra" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

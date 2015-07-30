@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="02/21/2013 14:14:34" ReportInfo.Modified="02/21/2013 14:46:48" ReportInfo.CreatorVersion="1.4.19.0">
+  <Dictionary>
+    <TableDataSource Name="Artikli" ReferenceName="Data.Artikli" DataType="System.Int32" Enabled="true">
+      <Column Name="po_sifra" DataType="System.String"/>
+      <Column Name="po_naziv" DataType="System.String"/>
+      <Column Name="nabavna vrijednost" DataType="System.Decimal"/>
+      <Column Name="pordajna vrijednost" DataType="System.Decimal"/>
+    </TableDataSource>
+    <Parameter Name="datumOD" DataType="System.String"/>
+    <Parameter Name="datumDO" DataType="System.String"/>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="94.5">
+      <TextObject Name="Text1" Left="519.75" Top="9.45" Width="179.55" Height="18.9" Text="[Date]"/>
+      <TextObject Name="Text2" Left="132.3" Top="47.25" Width="472.5" Height="28.35" Text="Pregled gratisa za razdoblje od: [datumOD]  do: [datumDO]" Font="Arial, 12pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="98.5" Width="718.2" Height="23.35" Border.Lines="Bottom">
+      <TextObject Name="Text3" Left="18.9" Width="94.5" Height="18.9" Text="Poslovnica" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text4" Left="415.8" Width="151.2" Height="18.9" Text="Nabavna vrijednost" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text5" Left="567" Width="141.75" Height="18.9" Text="Prodajna vrijednost&#13;&#10;" Font="Arial, 10pt, style=Bold"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="125.85" Width="718.2" Height="23.35" DataSource="Artikli">
+      <TextObject Name="Text6" Left="18.9" Top="3" Width="94.5" Height="18.9" Text="[Artikli.po_sifra]"/>
+      <TextObject Name="Text7" Left="113.4" Top="3" Width="302.4" Height="18.9" Text="[Artikli.po_naziv]"/>
+      <TextObject Name="Text9" Left="415.8" Top="3" Width="151.2" Height="18.9" Text="[Artikli.nabavna vrijednost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" WordWrap="false" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text10" Left="567" Top="3" Width="141.75" Height="18.9" Text="[Artikli.pordajna vrijednost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" WordWrap="false" Trimming="EllipsisCharacter"/>
+      <Sort>
+        <Sort Expression="[Artikli.po_naziv]"/>
+      </Sort>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="153.2" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>

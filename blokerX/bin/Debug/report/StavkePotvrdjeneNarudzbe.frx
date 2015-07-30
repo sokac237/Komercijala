@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="02/09/2012 14:55:27" ReportInfo.Modified="02/22/2012 07:58:10" ReportInfo.CreatorVersion="1.4.19.0">
+  <Dictionary>
+    <TableDataSource Name="Artikli" ReferenceName="Data.Artikli" DataType="System.Int32" Enabled="true">
+      <Column Name="RG_SIFRA" DataType="System.String"/>
+      <Column Name="RG_NAZIV" DataType="System.String"/>
+      <Column Name="AR_SIFRA" DataType="System.String"/>
+      <Column Name="AR_NAZIV" DataType="System.String"/>
+      <Column Name="nas_ID" DataType="System.Int32"/>
+      <Column Name="narudzba_na_ID" DataType="System.Int32"/>
+      <Column Name="artikl_ar_ID" DataType="System.Int32"/>
+      <Column Name="barkod_bk_kod" DataType="System.String"/>
+      <Column Name="nas_kolicina" DataType="System.Decimal"/>
+      <Column Name="nas_nabavnacijena" DataType="System.Decimal"/>
+      <Column Name="nas_odobrenakolicina" DataType="System.Decimal"/>
+      <Column Name="nas_isporucenakolicina" DataType="System.Decimal"/>
+      <Column Name="Razlika" DataType="System.Int32" PropName="Column" Calculated="true" Expression="[Artikli.nas_isporucenakolicina]-[Artikli.nas_kolicina]"/>
+    </TableDataSource>
+    <Parameter Name="skladiste" DataType="System.String"/>
+    <Parameter Name="narudzba" DataType="System.String"/>
+    <Parameter Name="trgovina" DataType="System.String"/>
+    <Parameter Name="sifratrgovina" DataType="System.String"/>
+    <Total Name="SumaNarucio" Expression="[Artikli.nas_kolicina]" Evaluator="Data1" PrintOn="GroupFooter1"/>
+    <Total Name="Odobrio" Expression="[Artikli.nas_odobrenakolicina]" Evaluator="Data1" PrintOn="GroupFooter1"/>
+    <Total Name="Isporuceno" Expression="[Artikli.nas_isporucenakolicina]" Evaluator="Data1" PrintOn="GroupFooter1"/>
+    <Total Name="Razlika" Expression="[Artikli.Razlika]" Evaluator="Data1" PrintOn="GroupFooter1"/>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="198.45">
+      <TableObject Name="Table2" Left="28.35" Top="28.35" Width="226.8" Height="56.7">
+        <TableColumn Name="Column1" Width="226.8"/>
+        <TableRow Name="Row1">
+          <TableCell Name="Cell1" Text="Boso d.o.o." Font="Arial, 10pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row2">
+          <TableCell Name="Cell6" Text="H.D.Genschera 22d"/>
+        </TableRow>
+        <TableRow Name="Row3">
+          <TableCell Name="Cell11" Text="32100 Vinkovci"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="Text8" Left="491.4" Top="18.9" Width="207.9" Height="18.9" Text="Izrađeno: [Date]" Format="Date" Format.Format="f" Font="Arial, 8pt"/>
+      <TextObject Name="Text9" Left="141.75" Top="113.4" Width="264.6" Height="18.9" Text="Skladište: [skladiste]&#13;&#10;&#13;&#10;" Font="Arial, 9.75pt, style=Bold"/>
+      <ZipCodeObject Name="ZipCode1" Left="-9450" Top="-9450" Width="238.14" Height="53.92" Border.Width="1"/>
+      <TextObject Name="Text31" Left="110.4" Top="139.75" Width="264.6" Height="18.9" Text="Broj narudžbe: [narudzba]&#13;&#10;&#13;&#10;" Font="Arial, 9.75pt, style=Bold"/>
+      <TextObject Name="Text6" Left="144.2" Top="171.1" Width="548.1" Height="18.9" Text="Trgovina:  [sifratrgovina]  [trgovina]" Font="Arial, 9.75pt, style=Bold"/>
+    </ReportTitleBand>
+    <GroupHeaderBand Name="GroupHeader1" Top="202.45" Width="718.2" Height="97.5" Border.Lines="Bottom" Condition="[Artikli.RG_NAZIV]">
+      <TextObject Name="Text2" Left="37.2" Top="47.55" Width="81.4" Height="18.9" Fill.Color="Gainsboro" Text="Šifra&#13;&#10;"/>
+      <TextObject Name="Text30" Left="367.9" Top="47.25" Width="347.95" Height="18.9" Fill.Color="Gainsboro" Text="Količina"/>
+      <TextObject Name="Text1" Left="18.9" Top="9.45" Width="680.4" Height="18.9" Text="[Artikli.RG_NAZIV]" Font="Arial, 9.75pt, style=Bold"/>
+      <TextObject Name="Text32" Left="118.3" Top="47.25" Width="251.05" Height="18.9" Fill.Color="Gainsboro" Text="Naziv artikla&#13;&#10;"/>
+      <TextObject Name="Text33" Left="-2" Top="47.8" Width="39.7" Height="18.9" Fill.Color="Gainsboro" Text="Rbr.&#13;&#10;"/>
+      <TextObject Name="Text5" Left="371" Top="66.65" Width="78.5" Height="28.35" Text="Naručio poslovođa" Font="Arial, 9pt"/>
+      <TextObject Name="Text34" Left="451" Top="66.1" Width="78.5" Height="28.35" Text="Odobrio komercijalist" Font="Arial, 9pt"/>
+      <TextObject Name="Text35" Left="531" Top="66.1" Width="78.5" Height="28.35" Text="Isporučeno" Font="Arial, 9pt"/>
+      <TextObject Name="Text36" Left="610" Top="66.1" Width="106.85" Height="28.35" Text="Razlika isporučeno - poslovođa&#13;&#10;" Font="Arial, 8.25pt"/>
+      <DataBand Name="Data1" Top="303.95" Width="718.2" Height="29.9" DataSource="Artikli">
+        <TextObject Name="Text20" Top="1.25" Width="41.25" Height="18.9" Text="[Row#]." HorzAlign="Center" Font="Arial, 9pt"/>
+        <TextObject Name="Text3" Left="40.5" Top="1" Width="94.5" Height="18.9" Text="[Artikli.AR_SIFRA]" Font="Arial, 9.75pt"/>
+        <TextObject Name="Text4" Left="135.8" Top="1" Width="236.25" Height="27.9" Text="[Artikli.AR_NAZIV]" Font="Arial, 9pt"/>
+        <TextObject Name="Text7" Left="372" Top="1" Width="78.5" Height="18.9" Text="[Artikli.nas_kolicina]" WordWrap="false" Trimming="EllipsisCharacter"/>
+        <TextObject Name="Text11" Left="449.5" Top="1" Width="80.5" Height="18.9" Text="[Artikli.nas_odobrenakolicina]" WordWrap="false" Trimming="EllipsisCharacter"/>
+        <TextObject Name="Text12" Left="528.55" Top="1" Width="81.5" Height="18.9" Text="[Artikli.nas_isporucenakolicina]" WordWrap="false" Trimming="EllipsisCharacter"/>
+        <TextObject Name="Text13" Left="611.15" Top="1" Width="94.5" Height="18.9" Text="[Artikli.Razlika]"/>
+      </DataBand>
+      <GroupFooterBand Name="GroupFooter1" Top="337.85" Width="718.2" Height="37.8" Border.Lines="Top">
+        <TextObject Name="Text14" Left="372.55" Top="1.45" Width="79.5" Height="18.9" Text="[SumaNarucio]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="3" Format.DecimalSeparator="," Format.GroupSeparator="." Format.NegativePattern="2"/>
+        <TextObject Name="Text15" Left="450.6" Top="1" Width="79.5" Height="18.9" Text="[Odobrio]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="3" Format.DecimalSeparator="," Format.GroupSeparator="." Format.NegativePattern="2"/>
+        <TextObject Name="Text16" Left="531.55" Top="2.45" Width="80.5" Height="18.9" Text="[Isporuceno]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="3" Format.DecimalSeparator="," Format.GroupSeparator="." Format.NegativePattern="2"/>
+        <TextObject Name="Text17" Left="611.25" Top="2" Width="92.5" Height="18.9" Text="[Razlika]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="3" Format.DecimalSeparator="," Format.GroupSeparator="." Format.NegativePattern="2"/>
+      </GroupFooterBand>
+    </GroupHeaderBand>
+    <PageFooterBand Name="PageFooter1" Top="379.65" Width="718.2" Height="18.9">
+      <TextObject Name="Text10" Left="604.8" Width="94.5" Height="18.9" Text="[PageN]" HorzAlign="Center"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

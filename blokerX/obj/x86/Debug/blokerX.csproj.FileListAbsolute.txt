@@ -1,0 +1,253 @@
+c:\users\ivans\documents\visual studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\ivans\documents\visual studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokirajx.frmLogin.resources
+c:\users\ivans\documents\visual studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokirajx.frmMain.resources
+c:\users\ivans\documents\visual studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.Properties.Resources.resources
+c:\users\ivans\documents\visual studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokirajx.frmRobneGrupePoKategoriji.resources
+c:\users\ivans\documents\visual studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\ivans\documents\visual studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\ivans\documents\visual studio 2010\Projects\blokerX\blokerX\bin\Debug\blokerX.exe.config
+c:\users\ivans\documents\visual studio 2010\Projects\blokerX\blokerX\bin\Debug\blokerX.exe
+c:\users\ivans\documents\visual studio 2010\Projects\blokerX\blokerX\bin\Debug\blokerX.pdb
+c:\users\ivans\documents\visual studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.exe
+c:\users\ivans\documents\visual studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.pdb
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmArtikliPoDobavljacu.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmAzuriranjePaketa.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmArtikliPoRG.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmArtikliDobavljacaPoBarkodu.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmIzmjenaCijena.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.exe.licenses
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmStalniCjenikPoDobavljacu.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmStalniCjenikPoRG.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmAkcijskiCjenikProdaja.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmAzurirajProdajniAkcijskiCjenik.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmPartneri.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmAzurirajStavkeProdajnihAkcijskihCjenika.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmStalniNabavniCjenik.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmAzurirajStalniNabavniCjenik.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmAzurirajStalniNabavniCjenikStavke.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmAkcijskiNabavniCjenik.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmAzurirajAkcijskiNabavniCjenik.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmAzurirajAkcijskiNabavniStavke.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmPregledStanjaArtikalauXGrupiZaTrgovinu.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmDodatnePozicije.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmPregledPoslovnicaPoKategoriji.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmAzurirajPoslovnicePoKategoriji.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmPregledAkcijskihNabavnihCijena.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmPregledProdajnihAkcijskihCijena.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmPregledProdajnihCijenaZaArtikl.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmSifarnikArtikala.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmPoslovniceUKojeIdeDobavljac.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmPregledDobavljacaPoTrgovinama.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmAzuriranjeProdajeDodatnihPozicija.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmVrstePozicije.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmOperater.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.FrmPregledArtikalaNivelacija.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmUnosArtikalaKojimaSeMijenjaCijena.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmPoslovnice.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmPrijenosIzCSVDatoteke.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmPrijenosCSV.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmPotvrdiNarudzbu.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmStareNarudzbe.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmPregledNarudzbiSaSkladista.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmStavkeNarudzbe.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\blokerX\blokerX\obj\x86\Debug\blokerX.frmStavkeStareNarudzbe.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\bin\Debug\blokerX.exe.config
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.exe
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.pdb
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\bin\Debug\blokerX.exe
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\bin\Debug\blokerX.pdb
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmAkcijskiNabavniCjenik.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajAkcijskiNabavniStavke.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajAkcijskiNabavniCjenik.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajPoslovnicePoKategoriji.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajStalniNabavniCjenikStavke.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajStalniNabavniCjenik.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmAzuriranjeProdajeDodatnihPozicija.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajStavkeProdajnihAkcijskihCjenika.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmAkcijskiCjenikProdaja.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmArtikliDobavljacaPoBarkodu.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmArtikliPoDobavljacu.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmArtikliPoRG.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmAzuriranjePaketa.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajProdajniAkcijskiCjenik.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmDodatnePozicije.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmIzmjenaCijena.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokirajx.frmLogin.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokirajx.frmMain.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmStavkeNarudzbe.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmOperater.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmPartneri.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmPoslovnice.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmPotvrdiNarudzbu.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledAkcijskihNabavnihCijena.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.FrmPregledArtikalaNivelacija.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledDobavljacaPoTrgovinama.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledNarudzbiSaSkladista.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledPoslovnicaPoKategoriji.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmPoslovniceUKojeIdeDobavljac.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledProdajnihAkcijskihCijena.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledProdajnihCijenaZaArtikl.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledStanjaArtikalauXGrupiZaTrgovinu.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmPrijenosCSV.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmPrijenosIzCSVDatoteke.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.Properties.Resources.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokirajx.frmRobneGrupePoKategoriji.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmSifarnikArtikala.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmVrstePozicije.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmStalniCjenikPoDobavljacu.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmStalniCjenikPoRG.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmStalniNabavniCjenik.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmStareNarudzbe.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmStavkeStareNarudzbe.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmUnosArtikalaKojimaSeMijenjaCijena.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.exe.licenses
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmFiltrirajMarze.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\bin\Debug\SX.dll
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\bin\Debug\SX.xml
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledPozicijaZaTrgovinu.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\bloker\blokerX\obj\x86\Debug\blokerX.frmDobavljacTrgovina.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\bin\Debug\blokerX.exe.config
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.exe
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.pdb
+C:\Users\IvanS\Desktop\bloker\blokerX\bin\Debug\blokerX.exe
+C:\Users\IvanS\Desktop\bloker\blokerX\bin\Debug\blokerX.pdb
+C:\Users\IvanS\Desktop\bloker\blokerX\bin\Debug\FastReport.MySQL.dll
+C:\Users\IvanS\Desktop\bloker\blokerX\bin\Debug\SX.dll
+C:\Users\IvanS\Desktop\bloker\blokerX\bin\Debug\FastReport.MySQL.pdb
+C:\Users\IvanS\Desktop\bloker\blokerX\bin\Debug\SX.xml
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmAkcijskiNabavniCjenik.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajAkcijskiNabavniStavke.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajAkcijskiNabavniCjenik.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajPoslovnicePoKategoriji.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajStalniNabavniCjenikStavke.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajStalniNabavniCjenik.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmAzuriranjeProdajeDodatnihPozicija.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajStavkeProdajnihAkcijskihCjenika.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmAkcijskiCjenikProdaja.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmArtikliDobavljacaPoBarkodu.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmArtikliPoDobavljacu.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmArtikliPoRG.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmAzuriranjePaketa.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajProdajniAkcijskiCjenik.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmDobavljacTrgovina.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmDodatnePozicije.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmFiltrirajMarze.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmIzmjenaCijena.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokirajx.frmLogin.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokirajx.frmMain.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmStavkeNarudzbe.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmOperater.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmPartneri.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmPoslovnice.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmPotvrdiNarudzbu.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledAkcijskihNabavnihCijena.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.FrmPregledArtikalaNivelacija.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledDobavljacaPoTrgovinama.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledNarudzbiSaSkladista.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledPoslovnicaPoKategoriji.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmPoslovniceUKojeIdeDobavljac.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledPozicijaZaTrgovinu.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledProdajnihAkcijskihCijena.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledProdajnihCijenaZaArtikl.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledStanjaArtikalauXGrupiZaTrgovinu.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmPrijenosCSV.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmPrijenosIzCSVDatoteke.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.Properties.Resources.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokirajx.frmRobneGrupePoKategoriji.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmSifarnikArtikala.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmVrstePozicije.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmStalniCjenikPoDobavljacu.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmStalniCjenikPoRG.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmStalniNabavniCjenik.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmStareNarudzbe.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmStavkeStareNarudzbe.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.frmUnosArtikalaKojimaSeMijenjaCijena.resources
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\IvanS\Desktop\bloker\blokerX\obj\x86\Debug\blokerX.exe.licenses
+H:\bloker\blokerX\bin\Debug\blokerX.exe.config
+H:\bloker\blokerX\bin\Debug\blokerX.exe
+H:\bloker\blokerX\bin\Debug\blokerX.pdb
+H:\bloker\blokerX\bin\Debug\FastReport.MySQL.dll
+H:\bloker\blokerX\bin\Debug\MySql.Data.dll
+H:\bloker\blokerX\bin\Debug\FastReport.MySQL.pdb
+H:\bloker\blokerX\bin\Debug\SX.xml
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmAkcijeZaTrgovinu.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmAkcijskiNabavniCjenik.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajAkcijskiNabavniStavke.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajAkcijskiNabavniCjenik.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajPoslovnicePoKategoriji.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajStalniNabavniCjenikStavke.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajStalniNabavniCjenik.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmAzuriranjeProdajeDodatnihPozicija.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajStavkeProdajnihAkcijskihCjenika.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmAkcijskiCjenikProdaja.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmArtikliDobavljacaPoBarkodu.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmArtikliPoDobavljacu.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmArtikliPoRG.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmAzuriranjePaketa.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmAzurirajProdajniAkcijskiCjenik.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmCSVMPCakcija.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmCSVnabavniakcija.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmDiktiranaCijenaArtikalaZaTrgovine.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmDobavljacTrgovina.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmDodajSKalkulacije.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmDodatnePozicije.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmFiltrirajMarze.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmIzmjenaCijena.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmKategorijeAkcija.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmLimitNarudzbe.resources
+H:\bloker\blokerX\obj\x86\Debug\blokirajx.frmLogin.resources
+H:\bloker\blokerX\obj\x86\Debug\blokirajx.frmMain.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmMinMax.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmStavkeNarudzbe.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmNovaAkcija.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmNovaAkcijaStavke.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmOperater.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPartneri.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPoruka.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPoslovnice.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPotvrdiNarudzbu.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledAkcija.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledAkcijskihCijenaNivo3.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledAkcijskihNabavnihCijena.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.FrmPregledArtikalaNivelacija.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledDobavljacaPoTrgovinama.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledGratisa.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledNarudzbiPoKomercijalistu.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledNarudzbiSaSkladista.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledPoslovnicaPoKategoriji.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPoslovniceUKojeIdeDobavljac.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledPozicijaZaTrgovinu.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledProdajnihAkcijskihCijena.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledProdajnihCijenaZaArtikl.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPregledStanjaArtikalauXGrupiZaTrgovinu.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPrijenosCSV.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPrijenosIzCSVDatoteke.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmPripremaCijena.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.Properties.Resources.resources
+H:\bloker\blokerX\obj\x86\Debug\blokirajx.frmRobneGrupePoKategoriji.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmSifarnikArtikala.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmVrstePozicije.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmRobneGrupe.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.Sifarnik.frmArtikl.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmSifreArtikalaKodDobavljaca.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmSnizenjaObracun.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmSnizenjaOdDobavljaca.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmStalniCjenikPoDobavljacu.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmStalniCjenikPoRG.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmStalniNabavniCjenik.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmStareNarudzbe.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmStavkeStareNarudzbe.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmUnosArtikalaKojimaSeMijenjaCijena.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmUnosGratisa.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.frmZapisnik.resources
+H:\bloker\blokerX\obj\x86\Debug\blokerX.csproj.GenerateResource.Cache
+H:\bloker\blokerX\obj\x86\Debug\blokerX.exe.licenses
+H:\bloker\blokerX\obj\x86\Debug\blokerX.exe
+H:\bloker\blokerX\obj\x86\Debug\blokerX.pdb
+H:\bloker\blokerX\obj\x86\Debug\blokerX.csprojResolveAssemblyReference.cache

@@ -1,0 +1,1736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{112C02C6-08D6-4756-A8D8-945921FE3A1B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>blokerX</RootNamespace>
+    <AssemblyName>blokerX</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Letter_K_Icon_128.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADODB, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DevExpress.Data.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd" />
+    <Reference Include="DevExpress.Utils.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd" />
+    <Reference Include="DevExpress.XtraEditors.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd" />
+    <Reference Include="DevExpress.XtraGrid.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd" />
+    <Reference Include="FastReport, Version=1.4.19.0, Culture=neutral, PublicKeyToken=2af612e6bbbcb6be" />
+    <Reference Include="FastReport.Bars, Version=1.4.19.0, Culture=neutral, PublicKeyToken=2af612e6bbbcb6be" />
+    <Reference Include="FastReport.Editor, Version=1.4.19.0, Culture=neutral, PublicKeyToken=2af612e6bbbcb6be" />
+    <Reference Include="FastReport.MySQL">
+      <HintPath>D:\Csharp\FastReport NET\connections\FastReport.MySQL\obj\Debug\FastReport.MySQL.dll</HintPath>
+    </Reference>
+    <Reference Include="FileHelpers">
+      <HintPath>..\..\..\..\..\Desktop\FileHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinMaskedEdit.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.5.4\Assemblies\v2.0\MySql.Data.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SX, Version=2.1.7.9, Culture=neutral, PublicKeyToken=e116d99a00eca71b, processorArchitecture=MSIL">
+      <HintPath>P:\visual c#\komponente\excelexport\SmartXLS\Bin\SX.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AkcCijeneNivo3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AkcCijeneNivo3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Akcije za trgovinu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akcije za trgovinu.Designer.cs">
+      <DependentUpon>Akcije za trgovinu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akcijski nabavni cjenik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akcijski nabavni cjenik.Designer.cs">
+      <DependentUpon>Akcijski nabavni cjenik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AkcijskiCjenikProdajni.cs">
+      <DependentUpon>AkcijskiCjenikProdajni.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AkcijskiNabavniCjenik.cs">
+      <DependentUpon>AkcijskiNabavniCjenik.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AkcijskiNabavniCjenik.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AkcijskiNabavniCjenik.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AkcijskiNabavniStavke.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AkcijskiNabavniStavke.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ArtikliKojiSeMoguNivelirati.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArtikliKojiSeMoguNivelirati.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ArtiklipoRGDobavljac.cs">
+      <DependentUpon>ArtiklipoRGDobavljac.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ArtikliZaNivelaciju.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArtikliZaNivelaciju.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Azuriraj akcijski nabavni cjenik stavke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Azuriraj akcijski nabavni cjenik stavke.Designer.cs">
+      <DependentUpon>Azuriraj akcijski nabavni cjenik stavke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Azuriraj akcijski nabavni cjenik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Azuriraj akcijski nabavni cjenik.Designer.cs">
+      <DependentUpon>Azuriraj akcijski nabavni cjenik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Azuriraj pregled poslovnica po kategoriji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Azuriraj pregled poslovnica po kategoriji.Designer.cs">
+      <DependentUpon>Azuriraj pregled poslovnica po kategoriji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Azuriraj stalni nabavni cjenik stavke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Azuriraj stalni nabavni cjenik stavke.Designer.cs">
+      <DependentUpon>Azuriraj stalni nabavni cjenik stavke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Azuriraj stalni nabavni cjenik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Azuriraj stalni nabavni cjenik.Designer.cs">
+      <DependentUpon>Azuriraj stalni nabavni cjenik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Azuriranje prodaje dodatnih pozicija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Azuriranje prodaje dodatnih pozicija.Designer.cs">
+      <DependentUpon>Azuriranje prodaje dodatnih pozicija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Azuriranje stavki prodajnih akcijskih cjenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Azuriranje stavki prodajnih akcijskih cjenika.Designer.cs">
+      <DependentUpon>Azuriranje stavki prodajnih akcijskih cjenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akcijski cjenik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akcijski cjenik.Designer.cs">
+      <DependentUpon>Akcijski cjenik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AkcijskiCjenikProdajni.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AkcijskiCjenikProdajni.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Artikli dobavljača po barkodu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Artikli dobavljača po barkodu.Designer.cs">
+      <DependentUpon>Artikli dobavljača po barkodu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Artikli po dobavljacu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Artikli po dobavljacu.Designer.cs">
+      <DependentUpon>Artikli po dobavljacu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Artikli po RG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Artikli po RG.Designer.cs">
+      <DependentUpon>Artikli po RG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Artikli.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Artikli.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ArtiklipoRGDobavljac.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArtiklipoRGDobavljac.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ArtikliUStalniCjenikDobavljac.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArtikliUStalniCjenikDobavljac.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Azuriranje paketa .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Azuriranje paketa .Designer.cs">
+      <DependentUpon>Azuriranje paketa .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Azuriranje prodajnih akcijskih cjenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Azuriranje prodajnih akcijskih cjenika.Designer.cs">
+      <DependentUpon>Azuriranje prodajnih akcijskih cjenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CjenikDobavljacaCSV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CjenikDobavljacaCSV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CSV MPC akcija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSV MPC akcija.Designer.cs">
+      <DependentUpon>CSV MPC akcija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CSV nabavni akcija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSV nabavni akcija.Designer.cs">
+      <DependentUpon>CSV nabavni akcija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiktiranaCijenaArtikalaZaTrgovine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiktiranaCijenaArtikalaZaTrgovine.Designer.cs">
+      <DependentUpon>DiktiranaCijenaArtikalaZaTrgovine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiktiranaCijenaArtikli.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiktiranaCijenaArtikli.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dobavljac.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dobavljac.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dobavljaci -Trgovine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dobavljaci -Trgovine.Designer.cs">
+      <DependentUpon>Dobavljaci -Trgovine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dobavljaci za trgovinu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dobavljaci za trgovinu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dodaj s kalkulacije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dodaj s kalkulacije.Designer.cs">
+      <DependentUpon>Dodaj s kalkulacije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dodatne pozicije popis poslovnica.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dodatne pozicije popis poslovnica.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dodatne pozicije racuni.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dodatne pozicije racuni.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dodatne pozicije trgovina.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dodatne pozicije trgovina.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dodatne pozicije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dodatne pozicije.Designer.cs">
+      <DependentUpon>Dodatne pozicije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dodatne pozicije1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dodatne pozicije.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DodatnePozicijeZaTrgovinu.cs">
+      <DependentUpon>DodatnePozicijeZaTrgovinu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DodatnePozicijeZaTrgovinu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DodatnePozicijeZaTrgovinu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DohvatiSifruID.cs" />
+    <Compile Include="DozvoljenaNivelacija.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DozvoljenaNivelacija.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FiltrirajMarze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltrirajMarze.Designer.cs">
+      <DependentUpon>FiltrirajMarze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Gratis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gratis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InputBox.cs" />
+    <Compile Include="Izmjena cijene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izmjena cijene.Designer.cs">
+      <DependentUpon>Izmjena cijene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kalkulacija.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kalkulacija.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kategorija.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kategorija.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Kategorije akcija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kategorije akcija.Designer.cs">
+      <DependentUpon>Kategorije akcija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KategorijeAkcija.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KategorijeAkcija.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Komercijalist.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Komercijalist.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Limit narudzbe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Limit narudzbe.Designer.cs">
+      <DependentUpon>Limit narudzbe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LimitTrgovinaZaPartnera.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LimitTrgovinaZaPartnera.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinMax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinMax.Designer.cs">
+      <DependentUpon>MinMax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NabavneCijenePoCjenicima.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NabavneCijenePoCjenicima.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NarudzbaStavkaStare.cs">
+      <DependentUpon>NarudzbaStavkaStare.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NarudzbaStavkaStare.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NarudzbaStavkaStare.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NarudzbaStavke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NarudzbaStavke.Designer.cs">
+      <DependentUpon>NarudzbaStavke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NarudzbaStavke1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NarudzbaStavke.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Narudzbe po komercijalisti.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Narudzbe po komercijalisti.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NepotvrdjeneNarudzbe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NepotvrdjeneNarudzbe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Nova akcija stavke.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Nova akcija stavke.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Nova akcija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nova akcija.Designer.cs">
+      <DependentUpon>Nova akcija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovaAkcijaStavke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovaAkcijaStavke.Designer.cs">
+      <DependentUpon>NovaAkcijaStavke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovaAkcijaStavke1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NovaAkcijaStavke.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Operateri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operateri.Designer.cs">
+      <DependentUpon>Operateri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Partner.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Partner.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Partneri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Partneri.designer.cs">
+      <DependentUpon>Partneri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Poruka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Poruka.designer.cs">
+      <DependentUpon>Poruka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Poslovnica.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Poslovnica.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Poslovnice u koje ide dobavljac.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Poslovnice u koje ide dobavljac.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Poslovnice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Poslovnice.Designer.cs">
+      <DependentUpon>Poslovnice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PoslovnicePoKategoriji.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PoslovnicePoKategoriji.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Potvrdi narudzbu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Potvrdi narudzbu.Designer.cs">
+      <DependentUpon>Potvrdi narudzbu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PotvrdjeneNarudzbe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PotvrdjeneNarudzbe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled akcija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled akcija.Designer.cs">
+      <DependentUpon>Pregled akcija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled akcija1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pregled akcija.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled akcijskih cijena nivo 3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled akcijskih cijena nivo 3.Designer.cs">
+      <DependentUpon>Pregled akcijskih cijena nivo 3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled akcijskih nabavnih cijena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled akcijskih nabavnih cijena.Designer.cs">
+      <DependentUpon>Pregled akcijskih nabavnih cijena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled akcijskih nabavnih cijena1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pregled akcijskih nabavnih cijena.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled akcijskih prodajnih cijena.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pregled akcijskih prodajnih cijena.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled artikala koji se mogu nivelirati.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled artikala koji se mogu nivelirati.Designer.cs">
+      <DependentUpon>Pregled artikala koji se mogu nivelirati.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled dobavljaca za trgovinu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled dobavljaca za trgovinu.Designer.cs">
+      <DependentUpon>Pregled dobavljaca za trgovinu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled gratisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled gratisa.Designer.cs">
+      <DependentUpon>Pregled gratisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled gratisa1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pregled gratisa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled narudzbi po komercijalisti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled narudzbi po komercijalisti.Designer.cs">
+      <DependentUpon>Pregled narudzbi po komercijalisti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled narudzbi sa skladista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled narudzbi sa skladista.Designer.cs">
+      <DependentUpon>Pregled narudzbi sa skladista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled poslovnica po kategoriji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled poslovnica po kategoriji.Designer.cs">
+      <DependentUpon>Pregled poslovnica po kategoriji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled poslovnica u koje ide dobavljac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled poslovnica u koje ide dobavljac.Designer.cs">
+      <DependentUpon>Pregled poslovnica u koje ide dobavljac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled pozicija za trgovinu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled pozicija za trgovinu.Designer.cs">
+      <DependentUpon>Pregled pozicija za trgovinu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled prodajnih akcijskih cijena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled prodajnih akcijskih cijena.Designer.cs">
+      <DependentUpon>Pregled prodajnih akcijskih cijena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pregled prodajnih cijena 2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pregled prodajnih cijena 2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled prodajnih cijena za artikl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled prodajnih cijena za artikl.Designer.cs">
+      <DependentUpon>Pregled prodajnih cijena za artikl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled prodajnih cijena.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pregled prodajnih cijena.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled stanja artikala u X grupi za trgovinu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled stanja artikala u X grupi za trgovinu.Designer.cs">
+      <DependentUpon>Pregled stanja artikala u X grupi za trgovinu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijenos Csv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijenos Csv.Designer.cs">
+      <DependentUpon>Prijenos Csv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijenos iz CSV datoteke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijenos iz CSV datoteke.Designer.cs">
+      <DependentUpon>Prijenos iz CSV datoteke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Priprema cijena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Priprema cijena.Designer.cs">
+      <DependentUpon>Priprema cijena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProdajniAkcijskiStavke.cs">
+      <DependentUpon>ProdajniAkcijskiStavke.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProdajniAkcijskiStavke.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProdajniAkcijskiStavke.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RG1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RG1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RG2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RG2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RG3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RG3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RG4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RG4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RGDobavljac.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RGDobavljac.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Robne grupe po kategoriji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Robne grupe po kategoriji.designer.cs">
+      <DependentUpon>Robne grupe po kategoriji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnik Artikala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sifarnik Artikala.Designer.cs">
+      <DependentUpon>Sifarnik Artikala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnik pozicije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sifarnik pozicije.Designer.cs">
+      <DependentUpon>Sifarnik pozicije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnik robnegrupe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sifarnik robnegrupe.Designer.cs">
+      <DependentUpon>Sifarnik robnegrupe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnik\Artikl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sifarnik\Artikl.Designer.cs">
+      <DependentUpon>Artikl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SifraArtiklaKodDobavljaca.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SifraArtiklaKodDobavljaca.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sifre artikala kod dobavljaca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sifre artikala kod dobavljaca.Designer.cs">
+      <DependentUpon>Sifre artikala kod dobavljaca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Snizenja obracun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Snizenja obracun.Designer.cs">
+      <DependentUpon>Snizenja obracun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Snizenja.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Snizenja.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Snizenje odabrani.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Snizenje odabrani.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sniženja od dobavljaca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sniženja od dobavljaca.Designer.cs">
+      <DependentUpon>Sniženja od dobavljaca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stalni cjenik po dobavljacu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stalni cjenik po dobavljacu.Designer.cs">
+      <DependentUpon>Stalni cjenik po dobavljacu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stalni cjenik po robnim grupama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stalni cjenik po robnim grupama.Designer.cs">
+      <DependentUpon>Stalni cjenik po robnim grupama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stalni nabavni cjenik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stalni nabavni cjenik.Designer.cs">
+      <DependentUpon>Stalni nabavni cjenik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StalniNabavniCjenik.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StalniNabavniCjenik.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StalniNabavniCjenikStavke.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StalniNabavniCjenikStavke.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StanjeArtikala.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StanjeArtikala.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stare narudzbe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stare narudzbe.Designer.cs">
+      <DependentUpon>Stare narudzbe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StavkeStareNarudzbe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StavkeStareNarudzbe.Designer.cs">
+      <DependentUpon>StavkeStareNarudzbe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TipMaksimum.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TipMaksimum.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Unos artikala za mijenjane cijena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unos artikala za mijenjane cijena.Designer.cs">
+      <DependentUpon>Unos artikala za mijenjane cijena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unos gratisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unos gratisa.Designer.cs">
+      <DependentUpon>Unos gratisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Upiti.cs" />
+    <Compile Include="VrstePozicija.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VrstePozicija.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zapisnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zapisnik.Designer.cs">
+      <DependentUpon>Zapisnik.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Akcije za trgovinu.resx">
+      <DependentUpon>Akcije za trgovinu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akcijski nabavni cjenik.resx">
+      <DependentUpon>Akcijski nabavni cjenik.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Azuriraj akcijski nabavni cjenik stavke.resx">
+      <DependentUpon>Azuriraj akcijski nabavni cjenik stavke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Azuriraj akcijski nabavni cjenik.resx">
+      <DependentUpon>Azuriraj akcijski nabavni cjenik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Azuriraj pregled poslovnica po kategoriji.resx">
+      <DependentUpon>Azuriraj pregled poslovnica po kategoriji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Azuriraj stalni nabavni cjenik stavke.resx">
+      <DependentUpon>Azuriraj stalni nabavni cjenik stavke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Azuriraj stalni nabavni cjenik.resx">
+      <DependentUpon>Azuriraj stalni nabavni cjenik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Azuriranje prodaje dodatnih pozicija.resx">
+      <DependentUpon>Azuriranje prodaje dodatnih pozicija.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Azuriranje stavki prodajnih akcijskih cjenika.resx">
+      <DependentUpon>Azuriranje stavki prodajnih akcijskih cjenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akcijski cjenik.resx">
+      <DependentUpon>Akcijski cjenik.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Artikli dobavljača po barkodu.resx">
+      <DependentUpon>Artikli dobavljača po barkodu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Artikli po dobavljacu.resx">
+      <DependentUpon>Artikli po dobavljacu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Artikli po RG.resx">
+      <DependentUpon>Artikli po RG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Azuriranje paketa .resx">
+      <DependentUpon>Azuriranje paketa .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Azuriranje prodajnih akcijskih cjenika.resx">
+      <DependentUpon>Azuriranje prodajnih akcijskih cjenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CSV MPC akcija.resx">
+      <DependentUpon>CSV MPC akcija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CSV nabavni akcija.resx">
+      <DependentUpon>CSV nabavni akcija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiktiranaCijenaArtikalaZaTrgovine.resx">
+      <DependentUpon>DiktiranaCijenaArtikalaZaTrgovine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dobavljaci -Trgovine.resx">
+      <DependentUpon>Dobavljaci -Trgovine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dodaj s kalkulacije.resx">
+      <DependentUpon>Dodaj s kalkulacije.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dodatne pozicije.resx">
+      <DependentUpon>Dodatne pozicije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiltrirajMarze.resx">
+      <DependentUpon>FiltrirajMarze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izmjena cijene.resx">
+      <DependentUpon>Izmjena cijene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kategorije akcija.resx">
+      <DependentUpon>Kategorije akcija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Limit narudzbe.resx">
+      <DependentUpon>Limit narudzbe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinMax.resx">
+      <DependentUpon>MinMax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NarudzbaStavke.resx">
+      <DependentUpon>NarudzbaStavke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nova akcija.resx">
+      <DependentUpon>Nova akcija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaAkcijaStavke.resx">
+      <DependentUpon>NovaAkcijaStavke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operateri.resx">
+      <DependentUpon>Operateri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partneri.resx">
+      <DependentUpon>Partneri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Poruka.resx">
+      <DependentUpon>Poruka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Poslovnice.resx">
+      <DependentUpon>Poslovnice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Potvrdi narudzbu.resx">
+      <DependentUpon>Potvrdi narudzbu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled akcija.resx">
+      <DependentUpon>Pregled akcija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled akcijskih cijena nivo 3.resx">
+      <DependentUpon>Pregled akcijskih cijena nivo 3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled akcijskih nabavnih cijena.resx">
+      <DependentUpon>Pregled akcijskih nabavnih cijena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled artikala koji se mogu nivelirati.resx">
+      <DependentUpon>Pregled artikala koji se mogu nivelirati.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled dobavljaca za trgovinu.resx">
+      <DependentUpon>Pregled dobavljaca za trgovinu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled gratisa.resx">
+      <DependentUpon>Pregled gratisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled narudzbi po komercijalisti.resx">
+      <DependentUpon>Pregled narudzbi po komercijalisti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled narudzbi sa skladista.resx">
+      <DependentUpon>Pregled narudzbi sa skladista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled poslovnica po kategoriji.resx">
+      <DependentUpon>Pregled poslovnica po kategoriji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled poslovnica u koje ide dobavljac.resx">
+      <DependentUpon>Pregled poslovnica u koje ide dobavljac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled pozicija za trgovinu.resx">
+      <DependentUpon>Pregled pozicija za trgovinu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled prodajnih akcijskih cijena.resx">
+      <DependentUpon>Pregled prodajnih akcijskih cijena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled prodajnih cijena za artikl.resx">
+      <DependentUpon>Pregled prodajnih cijena za artikl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled stanja artikala u X grupi za trgovinu.resx">
+      <DependentUpon>Pregled stanja artikala u X grupi za trgovinu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijenos Csv.resx">
+      <DependentUpon>Prijenos Csv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijenos iz CSV datoteke.resx">
+      <DependentUpon>Prijenos iz CSV datoteke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Priprema cijena.resx">
+      <DependentUpon>Priprema cijena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Robne grupe po kategoriji.resx">
+      <DependentUpon>Robne grupe po kategoriji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnik Artikala.resx">
+      <DependentUpon>Sifarnik Artikala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnik pozicije.resx">
+      <DependentUpon>Sifarnik pozicije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnik robnegrupe.resx">
+      <DependentUpon>Sifarnik robnegrupe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnik\Artikl.resx">
+      <DependentUpon>Artikl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifre artikala kod dobavljaca.resx">
+      <DependentUpon>Sifre artikala kod dobavljaca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Snizenja obracun.resx">
+      <DependentUpon>Snizenja obracun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sniženja od dobavljaca.resx">
+      <DependentUpon>Sniženja od dobavljaca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stalni cjenik po dobavljacu.resx">
+      <DependentUpon>Stalni cjenik po dobavljacu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stalni cjenik po robnim grupama.resx">
+      <DependentUpon>Stalni cjenik po robnim grupama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stalni nabavni cjenik.resx">
+      <DependentUpon>Stalni nabavni cjenik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stare narudzbe.resx">
+      <DependentUpon>Stare narudzbe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StavkeStareNarudzbe.resx">
+      <DependentUpon>StavkeStareNarudzbe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unos artikala za mijenjane cijena.resx">
+      <DependentUpon>Unos artikala za mijenjane cijena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unos gratisa.resx">
+      <DependentUpon>Unos gratisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zapisnik.resx">
+      <DependentUpon>Zapisnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AkcCijeneNivo3.xsc">
+      <DependentUpon>AkcCijeneNivo3.xsd</DependentUpon>
+    </None>
+    <None Include="AkcCijeneNivo3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AkcCijeneNivo3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AkcCijeneNivo3.xss">
+      <DependentUpon>AkcCijeneNivo3.xsd</DependentUpon>
+    </None>
+    <None Include="AkcijskiCjenikProdajni.xsc">
+      <DependentUpon>AkcijskiCjenikProdajni.xsd</DependentUpon>
+    </None>
+    <None Include="AkcijskiCjenikProdajni.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AkcijskiCjenikProdajni.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AkcijskiCjenikProdajni.xss">
+      <DependentUpon>AkcijskiCjenikProdajni.xsd</DependentUpon>
+    </None>
+    <None Include="AkcijskiNabavniCjenik.xsc">
+      <DependentUpon>AkcijskiNabavniCjenik.xsd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AkcijskiNabavniCjenik.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AkcijskiNabavniCjenik.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AkcijskiNabavniCjenik.xss">
+      <DependentUpon>AkcijskiNabavniCjenik.xsd</DependentUpon>
+    </None>
+    <None Include="AkcijskiNabavniStavke.xsc">
+      <DependentUpon>AkcijskiNabavniStavke.xsd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AkcijskiNabavniStavke.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AkcijskiNabavniStavke.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AkcijskiNabavniStavke.xss">
+      <DependentUpon>AkcijskiNabavniStavke.xsd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Artikli.xsc">
+      <DependentUpon>Artikli.xsd</DependentUpon>
+    </None>
+    <None Include="Artikli.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Artikli.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Artikli.xss">
+      <DependentUpon>Artikli.xsd</DependentUpon>
+    </None>
+    <None Include="ArtikliKojiSeMoguNivelirati.xsc">
+      <DependentUpon>ArtikliKojiSeMoguNivelirati.xsd</DependentUpon>
+    </None>
+    <None Include="ArtikliKojiSeMoguNivelirati.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ArtikliKojiSeMoguNivelirati.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ArtikliKojiSeMoguNivelirati.xss">
+      <DependentUpon>ArtikliKojiSeMoguNivelirati.xsd</DependentUpon>
+    </None>
+    <None Include="ArtiklipoRGDobavljac.xsc">
+      <DependentUpon>ArtiklipoRGDobavljac.xsd</DependentUpon>
+    </None>
+    <None Include="ArtiklipoRGDobavljac.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ArtiklipoRGDobavljac.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ArtiklipoRGDobavljac.xss">
+      <DependentUpon>ArtiklipoRGDobavljac.xsd</DependentUpon>
+    </None>
+    <None Include="ArtikliUStalniCjenikDobavljac.xsc">
+      <DependentUpon>ArtikliUStalniCjenikDobavljac.xsd</DependentUpon>
+    </None>
+    <None Include="ArtikliUStalniCjenikDobavljac.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ArtikliUStalniCjenikDobavljac.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ArtikliUStalniCjenikDobavljac.xss">
+      <DependentUpon>ArtikliUStalniCjenikDobavljac.xsd</DependentUpon>
+    </None>
+    <None Include="ArtikliZaNivelaciju.xsc">
+      <DependentUpon>ArtikliZaNivelaciju.xsd</DependentUpon>
+    </None>
+    <None Include="ArtikliZaNivelaciju.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ArtikliZaNivelaciju.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ArtikliZaNivelaciju.xss">
+      <DependentUpon>ArtikliZaNivelaciju.xsd</DependentUpon>
+    </None>
+    <None Include="CjenikDobavljacaCSV.xsc">
+      <DependentUpon>CjenikDobavljacaCSV.xsd</DependentUpon>
+    </None>
+    <None Include="CjenikDobavljacaCSV.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CjenikDobavljacaCSV.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CjenikDobavljacaCSV.xss">
+      <DependentUpon>CjenikDobavljacaCSV.xsd</DependentUpon>
+    </None>
+    <None Include="DiktiranaCijenaArtikli.xsc">
+      <DependentUpon>DiktiranaCijenaArtikli.xsd</DependentUpon>
+    </None>
+    <None Include="DiktiranaCijenaArtikli.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DiktiranaCijenaArtikli.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DiktiranaCijenaArtikli.xss">
+      <DependentUpon>DiktiranaCijenaArtikli.xsd</DependentUpon>
+    </None>
+    <None Include="dobavljac.xsc">
+      <DependentUpon>dobavljac.xsd</DependentUpon>
+    </None>
+    <None Include="dobavljac.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dobavljac.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dobavljac.xss">
+      <DependentUpon>dobavljac.xsd</DependentUpon>
+    </None>
+    <None Include="Dobavljaci za trgovinu.xsc">
+      <DependentUpon>Dobavljaci za trgovinu.xsd</DependentUpon>
+    </None>
+    <None Include="Dobavljaci za trgovinu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dobavljaci za trgovinu.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dobavljaci za trgovinu.xss">
+      <DependentUpon>Dobavljaci za trgovinu.xsd</DependentUpon>
+    </None>
+    <None Include="Dodatne pozicije popis poslovnica.xsc">
+      <DependentUpon>Dodatne pozicije popis poslovnica.xsd</DependentUpon>
+    </None>
+    <None Include="Dodatne pozicije popis poslovnica.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dodatne pozicije popis poslovnica.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dodatne pozicije popis poslovnica.xss">
+      <DependentUpon>Dodatne pozicije popis poslovnica.xsd</DependentUpon>
+    </None>
+    <None Include="Dodatne pozicije racuni.xsc">
+      <DependentUpon>Dodatne pozicije racuni.xsd</DependentUpon>
+    </None>
+    <None Include="Dodatne pozicije racuni.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dodatne pozicije racuni.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dodatne pozicije racuni.xss">
+      <DependentUpon>Dodatne pozicije racuni.xsd</DependentUpon>
+    </None>
+    <None Include="Dodatne pozicije trgovina.xsc">
+      <DependentUpon>Dodatne pozicije trgovina.xsd</DependentUpon>
+    </None>
+    <None Include="Dodatne pozicije trgovina.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dodatne pozicije trgovina.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dodatne pozicije trgovina.xss">
+      <DependentUpon>Dodatne pozicije trgovina.xsd</DependentUpon>
+    </None>
+    <None Include="Dodatne pozicije.xsc">
+      <DependentUpon>Dodatne pozicije.xsd</DependentUpon>
+    </None>
+    <None Include="Dodatne pozicije.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dodatne pozicije1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dodatne pozicije.xss">
+      <DependentUpon>Dodatne pozicije.xsd</DependentUpon>
+    </None>
+    <None Include="DodatnePozicijeZaTrgovinu.xsc">
+      <DependentUpon>DodatnePozicijeZaTrgovinu.xsd</DependentUpon>
+    </None>
+    <None Include="DodatnePozicijeZaTrgovinu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DodatnePozicijeZaTrgovinu.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DodatnePozicijeZaTrgovinu.xss">
+      <DependentUpon>DodatnePozicijeZaTrgovinu.xsd</DependentUpon>
+    </None>
+    <None Include="DozvoljenaNivelacija.xsc">
+      <DependentUpon>DozvoljenaNivelacija.xsd</DependentUpon>
+    </None>
+    <None Include="DozvoljenaNivelacija.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DozvoljenaNivelacija.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DozvoljenaNivelacija.xss">
+      <DependentUpon>DozvoljenaNivelacija.xsd</DependentUpon>
+    </None>
+    <None Include="Gratis.xsc">
+      <DependentUpon>Gratis.xsd</DependentUpon>
+    </None>
+    <None Include="Gratis.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Gratis.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Gratis.xss">
+      <DependentUpon>Gratis.xsd</DependentUpon>
+    </None>
+    <None Include="Kalkulacija.xsc">
+      <DependentUpon>Kalkulacija.xsd</DependentUpon>
+    </None>
+    <None Include="Kalkulacija.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Kalkulacija.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Kalkulacija.xss">
+      <DependentUpon>Kalkulacija.xsd</DependentUpon>
+    </None>
+    <None Include="kategorija.xsc">
+      <DependentUpon>kategorija.xsd</DependentUpon>
+    </None>
+    <None Include="kategorija.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kategorija.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kategorija.xss">
+      <DependentUpon>kategorija.xsd</DependentUpon>
+    </None>
+    <None Include="KategorijeAkcija.xsc">
+      <DependentUpon>KategorijeAkcija.xsd</DependentUpon>
+    </None>
+    <None Include="KategorijeAkcija.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KategorijeAkcija.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="KategorijeAkcija.xss">
+      <DependentUpon>KategorijeAkcija.xsd</DependentUpon>
+    </None>
+    <None Include="Komercijalist.xsc">
+      <DependentUpon>Komercijalist.xsd</DependentUpon>
+    </None>
+    <None Include="Komercijalist.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Komercijalist.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Komercijalist.xss">
+      <DependentUpon>Komercijalist.xsd</DependentUpon>
+    </None>
+    <None Include="LimitTrgovinaZaPartnera.xsc">
+      <DependentUpon>LimitTrgovinaZaPartnera.xsd</DependentUpon>
+    </None>
+    <None Include="LimitTrgovinaZaPartnera.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LimitTrgovinaZaPartnera.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="LimitTrgovinaZaPartnera.xss">
+      <DependentUpon>LimitTrgovinaZaPartnera.xsd</DependentUpon>
+    </None>
+    <None Include="NabavneCijenePoCjenicima.xsc">
+      <DependentUpon>NabavneCijenePoCjenicima.xsd</DependentUpon>
+    </None>
+    <None Include="NabavneCijenePoCjenicima.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NabavneCijenePoCjenicima.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NabavneCijenePoCjenicima.xss">
+      <DependentUpon>NabavneCijenePoCjenicima.xsd</DependentUpon>
+    </None>
+    <None Include="NarudzbaStavkaStare.xsc">
+      <DependentUpon>NarudzbaStavkaStare.xsd</DependentUpon>
+    </None>
+    <None Include="NarudzbaStavkaStare.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NarudzbaStavkaStare.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NarudzbaStavkaStare.xss">
+      <DependentUpon>NarudzbaStavkaStare.xsd</DependentUpon>
+    </None>
+    <None Include="NarudzbaStavke.xsc">
+      <DependentUpon>NarudzbaStavke.xsd</DependentUpon>
+    </None>
+    <None Include="NarudzbaStavke.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NarudzbaStavke1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NarudzbaStavke.xss">
+      <DependentUpon>NarudzbaStavke.xsd</DependentUpon>
+    </None>
+    <None Include="Narudzbe po komercijalisti.xsc">
+      <DependentUpon>Narudzbe po komercijalisti.xsd</DependentUpon>
+    </None>
+    <None Include="Narudzbe po komercijalisti.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Narudzbe po komercijalisti.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Narudzbe po komercijalisti.xss">
+      <DependentUpon>Narudzbe po komercijalisti.xsd</DependentUpon>
+    </None>
+    <None Include="NepotvrdjeneNarudzbe.xsc">
+      <DependentUpon>NepotvrdjeneNarudzbe.xsd</DependentUpon>
+    </None>
+    <None Include="NepotvrdjeneNarudzbe.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NepotvrdjeneNarudzbe.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NepotvrdjeneNarudzbe.xss">
+      <DependentUpon>NepotvrdjeneNarudzbe.xsd</DependentUpon>
+    </None>
+    <None Include="Nova akcija stavke.xsc">
+      <DependentUpon>Nova akcija stavke.xsd</DependentUpon>
+    </None>
+    <None Include="Nova akcija stavke.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Nova akcija stavke.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Nova akcija stavke.xss">
+      <DependentUpon>Nova akcija stavke.xsd</DependentUpon>
+    </None>
+    <None Include="NovaAkcijaStavke.xsc">
+      <DependentUpon>NovaAkcijaStavke.xsd</DependentUpon>
+    </None>
+    <None Include="NovaAkcijaStavke.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NovaAkcijaStavke1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NovaAkcijaStavke.xss">
+      <DependentUpon>NovaAkcijaStavke.xsd</DependentUpon>
+    </None>
+    <None Include="Partner.xsc">
+      <DependentUpon>Partner.xsd</DependentUpon>
+    </None>
+    <None Include="Partner.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Partner.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Partner.xss">
+      <DependentUpon>Partner.xsd</DependentUpon>
+    </None>
+    <None Include="Poslovnica.xsc">
+      <DependentUpon>Poslovnica.xsd</DependentUpon>
+    </None>
+    <None Include="Poslovnica.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Poslovnica.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Poslovnica.xss">
+      <DependentUpon>Poslovnica.xsd</DependentUpon>
+    </None>
+    <None Include="Poslovnice u koje ide dobavljac.xsc">
+      <DependentUpon>Poslovnice u koje ide dobavljac.xsd</DependentUpon>
+    </None>
+    <None Include="Poslovnice u koje ide dobavljac.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Poslovnice u koje ide dobavljac.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Poslovnice u koje ide dobavljac.xss">
+      <DependentUpon>Poslovnice u koje ide dobavljac.xsd</DependentUpon>
+    </None>
+    <None Include="PoslovnicePoKategoriji.xsc">
+      <DependentUpon>PoslovnicePoKategoriji.xsd</DependentUpon>
+    </None>
+    <None Include="PoslovnicePoKategoriji.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PoslovnicePoKategoriji.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PoslovnicePoKategoriji.xss">
+      <DependentUpon>PoslovnicePoKategoriji.xsd</DependentUpon>
+    </None>
+    <None Include="PotvrdjeneNarudzbe.xsc">
+      <DependentUpon>PotvrdjeneNarudzbe.xsd</DependentUpon>
+    </None>
+    <None Include="PotvrdjeneNarudzbe.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PotvrdjeneNarudzbe.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PotvrdjeneNarudzbe.xss">
+      <DependentUpon>PotvrdjeneNarudzbe.xsd</DependentUpon>
+    </None>
+    <None Include="Pregled akcija.xsc">
+      <DependentUpon>Pregled akcija.xsd</DependentUpon>
+    </None>
+    <None Include="Pregled akcija.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pregled akcija1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pregled akcija.xss">
+      <DependentUpon>Pregled akcija.xsd</DependentUpon>
+    </None>
+    <None Include="Pregled akcijskih nabavnih cijena.xsc">
+      <DependentUpon>Pregled akcijskih nabavnih cijena.xsd</DependentUpon>
+    </None>
+    <None Include="Pregled akcijskih nabavnih cijena.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pregled akcijskih nabavnih cijena1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pregled akcijskih nabavnih cijena.xss">
+      <DependentUpon>Pregled akcijskih nabavnih cijena.xsd</DependentUpon>
+    </None>
+    <None Include="Pregled akcijskih prodajnih cijena.xsc">
+      <DependentUpon>Pregled akcijskih prodajnih cijena.xsd</DependentUpon>
+    </None>
+    <None Include="Pregled akcijskih prodajnih cijena.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pregled akcijskih prodajnih cijena.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pregled akcijskih prodajnih cijena.xss">
+      <DependentUpon>Pregled akcijskih prodajnih cijena.xsd</DependentUpon>
+    </None>
+    <None Include="Pregled gratisa.xsc">
+      <DependentUpon>Pregled gratisa.xsd</DependentUpon>
+    </None>
+    <None Include="Pregled gratisa.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pregled gratisa1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pregled gratisa.xss">
+      <DependentUpon>Pregled gratisa.xsd</DependentUpon>
+    </None>
+    <None Include="pregled prodajnih cijena 2.xsc">
+      <DependentUpon>pregled prodajnih cijena 2.xsd</DependentUpon>
+    </None>
+    <None Include="pregled prodajnih cijena 2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pregled prodajnih cijena 2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="pregled prodajnih cijena 2.xss">
+      <DependentUpon>pregled prodajnih cijena 2.xsd</DependentUpon>
+    </None>
+    <None Include="Pregled prodajnih cijena.xsc">
+      <DependentUpon>Pregled prodajnih cijena.xsd</DependentUpon>
+    </None>
+    <None Include="Pregled prodajnih cijena.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pregled prodajnih cijena.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pregled prodajnih cijena.xss">
+      <DependentUpon>Pregled prodajnih cijena.xsd</DependentUpon>
+    </None>
+    <None Include="ProdajniAkcijskiStavke.xsc">
+      <DependentUpon>ProdajniAkcijskiStavke.xsd</DependentUpon>
+    </None>
+    <None Include="ProdajniAkcijskiStavke.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProdajniAkcijskiStavke.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProdajniAkcijskiStavke.xss">
+      <DependentUpon>ProdajniAkcijskiStavke.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RG1.xsc">
+      <DependentUpon>RG1.xsd</DependentUpon>
+    </None>
+    <None Include="RG1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RG1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RG1.xss">
+      <DependentUpon>RG1.xsd</DependentUpon>
+    </None>
+    <None Include="RG2.xsc">
+      <DependentUpon>RG2.xsd</DependentUpon>
+    </None>
+    <None Include="RG2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RG2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RG2.xss">
+      <DependentUpon>RG2.xsd</DependentUpon>
+    </None>
+    <None Include="RG3.xsc">
+      <DependentUpon>RG3.xsd</DependentUpon>
+    </None>
+    <None Include="RG3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RG3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RG3.xss">
+      <DependentUpon>RG3.xsd</DependentUpon>
+    </None>
+    <None Include="RG4.xsc">
+      <DependentUpon>RG4.xsd</DependentUpon>
+    </None>
+    <None Include="RG4.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RG4.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RG4.xss">
+      <DependentUpon>RG4.xsd</DependentUpon>
+    </None>
+    <None Include="RGDobavljac.xsc">
+      <DependentUpon>RGDobavljac.xsd</DependentUpon>
+    </None>
+    <None Include="RGDobavljac.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RGDobavljac.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RGDobavljac.xss">
+      <DependentUpon>RGDobavljac.xsd</DependentUpon>
+    </None>
+    <None Include="SifraArtiklaKodDobavljaca.xsc">
+      <DependentUpon>SifraArtiklaKodDobavljaca.xsd</DependentUpon>
+    </None>
+    <None Include="SifraArtiklaKodDobavljaca.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SifraArtiklaKodDobavljaca.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SifraArtiklaKodDobavljaca.xss">
+      <DependentUpon>SifraArtiklaKodDobavljaca.xsd</DependentUpon>
+    </None>
+    <None Include="Snizenja.xsc">
+      <DependentUpon>Snizenja.xsd</DependentUpon>
+    </None>
+    <None Include="Snizenja.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Snizenja.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Snizenja.xss">
+      <DependentUpon>Snizenja.xsd</DependentUpon>
+    </None>
+    <None Include="Snizenje odabrani.xsc">
+      <DependentUpon>Snizenje odabrani.xsd</DependentUpon>
+    </None>
+    <None Include="Snizenje odabrani.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Snizenje odabrani.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Snizenje odabrani.xss">
+      <DependentUpon>Snizenje odabrani.xsd</DependentUpon>
+    </None>
+    <None Include="StalniNabavniCjenik.xsc">
+      <DependentUpon>StalniNabavniCjenik.xsd</DependentUpon>
+    </None>
+    <None Include="StalniNabavniCjenik.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StalniNabavniCjenik.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StalniNabavniCjenik.xss">
+      <DependentUpon>StalniNabavniCjenik.xsd</DependentUpon>
+    </None>
+    <None Include="StalniNabavniCjenikStavke.xsc">
+      <DependentUpon>StalniNabavniCjenikStavke.xsd</DependentUpon>
+    </None>
+    <None Include="StalniNabavniCjenikStavke.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StalniNabavniCjenikStavke.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StalniNabavniCjenikStavke.xss">
+      <DependentUpon>StalniNabavniCjenikStavke.xsd</DependentUpon>
+    </None>
+    <None Include="StanjeArtikala.xsc">
+      <DependentUpon>StanjeArtikala.xsd</DependentUpon>
+    </None>
+    <None Include="StanjeArtikala.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StanjeArtikala.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StanjeArtikala.xss">
+      <DependentUpon>StanjeArtikala.xsd</DependentUpon>
+    </None>
+    <None Include="TipMaksimum.xsc">
+      <DependentUpon>TipMaksimum.xsd</DependentUpon>
+    </None>
+    <None Include="TipMaksimum.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TipMaksimum.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TipMaksimum.xss">
+      <DependentUpon>TipMaksimum.xsd</DependentUpon>
+    </None>
+    <None Include="VrstePozicija.xsc">
+      <DependentUpon>VrstePozicija.xsd</DependentUpon>
+    </None>
+    <None Include="VrstePozicija.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VrstePozicija.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VrstePozicija.xss">
+      <DependentUpon>VrstePozicija.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Letter_K_Icon_128.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

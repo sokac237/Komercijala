@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="10/12/2011 12:49:33" ReportInfo.Modified="12/21/2012 10:19:59" ReportInfo.CreatorVersion="1.4.19.0">
+  <Dictionary>
+    <TableDataSource Name="Artikli" ReferenceName="Data.Artikli" DataType="System.Int32" Enabled="true">
+      <Column Name="rg_sifra" DataType="System.String"/>
+      <Column Name="rg_naziv" DataType="System.String"/>
+      <Column Name="CONCAT( operater.op_ime, ' ' , operater.op_prezime)" DataType="System.String"/>
+      <Column Name="ka_naziv" DataType="System.String"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="207.9">
+      <TableObject Name="Table1" Left="28.35" Top="9.45" Width="226.8" Height="113.4">
+        <TableColumn Name="Column1" Width="226.8"/>
+        <TableRow Name="Row1">
+          <TableCell Name="Cell1" Text="Boso d.o.o." Font="Arial, 10pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row2">
+          <TableCell Name="Cell6" Text="H.D.Genschera 22d"/>
+        </TableRow>
+        <TableRow Name="Row3">
+          <TableCell Name="Cell11" Text="32100 Vinkovci"/>
+        </TableRow>
+        <TableRow Name="Row4">
+          <TableCell Name="Cell16" Text="OIB: 91958721295"/>
+        </TableRow>
+        <TableRow Name="Row5">
+          <TableCell Name="Cell21" Text="Žiro: 2402006-1100064189"/>
+        </TableRow>
+        <TableRow Name="Row6">
+          <TableCell Name="Cell22" Text="Tel/fax: 032/341-200 ; 032/354-727"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="Text1" Left="255.15" Top="141.75" Width="292.95" Height="18.9" Text="Robne grupe po kategoriji" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text8" Left="500.85" Top="9.45" Width="207.9" Height="18.9" Text="Izrađeno: [Date]" Format="Date" Format.Format="f" Font="Arial, 8pt"/>
+      <TextObject Name="Text9" Left="28.35" Top="179.55" Width="463.05" Height="18.9" Text="Kategorija: [Artikli.ka_naziv]" Font="Arial, 11.25pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="211.9" Width="718.2" Height="28.35">
+      <TextObject Name="Text2" Left="28.35" Width="48.7" Height="18.9" Text="Rbr."/>
+      <TextObject Name="Text3" Left="77.5" Width="74.5" Height="18.9" Text="Šifra RG"/>
+      <TextObject Name="Text4" Left="153" Width="225.55" Height="18.9" Text="Naziv RG"/>
+      <TextObject Name="Text5" Left="379.45" Width="130.5" Height="18.9" Text="Operater"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="244.25" Width="718.2" Height="18.9" DataSource="Artikli">
+      <TableObject Name="Table2" Left="28.35" Width="805.7" Height="18.9" GrowToBottom="true">
+        <TableColumn Name="Column2" Width="47.15"/>
+        <TableColumn Name="Column3" Width="75.15"/>
+        <TableColumn Name="Column4" Width="228.15"/>
+        <TableColumn Name="Column5" Width="236.1"/>
+        <TableColumn Name="Column6" Width="219.15"/>
+        <TableRow Name="Row7">
+          <TableCell Name="Cell23" Text="[Row#]."/>
+          <TableCell Name="Cell24" Text="[Artikli.rg_sifra]"/>
+          <TableCell Name="Cell25" Text="[Artikli.rg_naziv]"/>
+          <TableCell Name="Cell26" Text="[Artikli.CONCAT( operater.op_ime, ' ' , operater.op_prezime)]"/>
+          <TableCell Name="Cell27"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="267.15" Width="718.2" Height="18.9">
+      <TextObject Name="Text7" Left="661.5" Width="94.5" Height="18.9" Text="[PageN]"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

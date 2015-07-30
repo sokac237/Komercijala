@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="10/11/2011 12:54:00" ReportInfo.Modified="02/22/2012 13:44:38" ReportInfo.CreatorVersion="1.4.19.0">
+  <Dictionary>
+    <TableDataSource Name="Artikli" ReferenceName="Data.Artikli" DataType="System.Int32" Enabled="true">
+      <Column Name="pa_sifra" DataType="System.String"/>
+      <Column Name="pa_naziv" DataType="System.String"/>
+      <Column Name="po_naziv" DataType="System.String"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="226.8">
+      <TableObject Name="Table1" Left="47.25" Top="9.45" Width="226.8" Height="113.4">
+        <TableColumn Name="Column1" Width="226.8"/>
+        <TableRow Name="Row1">
+          <TableCell Name="Cell1" Text="Boso d.o.o." Font="Arial, 10pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row2">
+          <TableCell Name="Cell6" Text="H.D.Genschera 22d"/>
+        </TableRow>
+        <TableRow Name="Row3">
+          <TableCell Name="Cell11" Text="32100 Vinkovci"/>
+        </TableRow>
+        <TableRow Name="Row4">
+          <TableCell Name="Cell16" Text="OIB: 91958721295"/>
+        </TableRow>
+        <TableRow Name="Row5">
+          <TableCell Name="Cell21" Text="Žiro: 2402006-1100064189"/>
+        </TableRow>
+        <TableRow Name="Row6">
+          <TableCell Name="Cell22" Text="Tel/fax: 032/341-200 ; 032/354-727"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="Text1" Left="236.25" Top="141.75" Width="292.95" Height="18.9" Text="Pregled dobavljača za trgovinu" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text5" Left="28.35" Top="179.55" Width="434.7" Height="18.9" Text="Poslovnica: [Artikli.po_naziv]" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text7" Left="434.7" Top="9.45" Width="274.05" Height="18.9" Text="Izrađeno: [Date]"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="230.8" Width="718.2" Height="37.8" Border.Lines="Top, Bottom">
+      <TextObject Name="Text2" Left="47.25" Top="9.45" Width="66.15" Height="18.9" Text="Rbr."/>
+      <TextObject Name="Text3" Left="113.4" Top="9.45" Width="103.95" Height="18.9" Text="Šifra partnera"/>
+      <TextObject Name="Text4" Left="217.35" Top="9.45" Width="264.6" Height="18.9" Text="Naziv partnera"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="272.6" Width="718.2" Height="18.9" DataSource="Artikli">
+      <TableObject Name="Table2" Left="47.25" Width="605.55" Height="18.9">
+        <TableColumn Name="Column2"/>
+        <TableColumn Name="Column3" Width="103.15"/>
+        <TableColumn Name="Column4" Width="436.25"/>
+        <TableRow Name="Row7">
+          <TableCell Name="Cell23" Text="[Row#]."/>
+          <TableCell Name="Cell24" Text="[Artikli.pa_sifra]"/>
+          <TableCell Name="Cell25" Text="[Artikli.pa_naziv]"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="295.5" Width="718.2" Height="18.9">
+      <TextObject Name="Text6" Left="661.5" Width="94.5" Height="18.9" Text="[PageN]"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>
